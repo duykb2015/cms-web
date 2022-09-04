@@ -36,10 +36,11 @@ $routes->set404Override();
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
-$routes->group('san-pham', function($routes) {
+$routes->group('san-pham', function ($routes) {
     $routes->get('/', 'Product ::index');
     $routes->get('chi-tiet/:any', 'Product::detail');
 });
+$routes->post('cart/add', 'Cart::add');
 
 /*
  * --------------------------------------------------------------------

@@ -19,8 +19,8 @@
     <link href="<?= base_url() ?>/assets/front/layout-home.css" rel="stylesheet" type="text/css" />
     <link href="<?= base_url() ?>/assets/front/responsive.css" rel="stylesheet" type="text/css" />
     <script language="javascript">
-        var site_url = 'https://minhtuanmobile.com/';
-        var current_url = 'https://minhtuanmobile.com/';
+        var site_url = '<?= base_url() ?>';
+        var current_url = '<?= base_url() ?>';
         var is_checkfid = false;
     </script>
     <!-- GENERAL GOOGLE SEARCH META -->

@@ -2,171 +2,37 @@
 <?= $this->section('content') ?>
 <div class="clearfix">
     <div class="clearfix bgmain_min" id="bg-main">
-
         <div class="bgmain__breadcrumb container">
-
             <ol class="breadcrumb">
                 <li class="breadcrumb-item">
                     <a href="https://minhtuanmobile.com/">Trang chủ</a>
                 </li>
-
                 <li class="breadcrumb-item">
-
                     <a href="https://minhtuanmobile.com/iphone/" title="iPhone" rel="v:url" property="v:title">
-                        iPhone </a>
-
-
-                </li>
-
-                <li class="breadcrumb-item">
-
-                    <a href="https://minhtuanmobile.com/iphone-11-series/" title="iPhone 11 series" rel="v:url" property="v:title">
-                        iPhone 11 series </a>
-
-
-                </li>
-
-                <li class="breadcrumb-item">
-
-                    <a href="https://minhtuanmobile.com/iphone-11/" title="iPhone 11" rel="v:url" property="v:title">
-                        iPhone 11 </a>
-
-
-                </li>
-
-                <li class="breadcrumb-item">
-
-                    <a href="https://minhtuanmobile.com/iphone-11-2019-64gb-ll-a-6-2-6284/" title="iPhone 11 64GB - Chính hãng VN A - MHDG3VN A" rel="v:url" property="v:title">
-                        iPhone 11 64GB - Chính hãng VN/A - MHDG3VN/A </a>
-
-
+                        iPhone
+                    </a>
                 </li>
             </ol>
-
         </div>
-
     </div>
-
-    <script type="application/ld+json">
-        {
-            "@context": "http://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [{
-                    "@type": "ListItem",
-                    "position": 1,
-                    "item": {
-                        "@id": "https://minhtuanmobile.com/",
-                        "name": "minhtuanmobile.com"
-                    }
-                },
-                {
-                    "@type": "ListItem",
-                    "position": 2,
-                    "item": {
-                        "@id": "https://minhtuanmobile.com/iphone/",
-                        "name": "iPhone"
-                    }
-                }, {
-                    "@type": "ListItem",
-                    "position": 3,
-                    "item": {
-                        "@id": "https://minhtuanmobile.com/iphone-11-series/",
-                        "name": "iPhone 11 series"
-                    }
-                }, {
-                    "@type": "ListItem",
-                    "position": 4,
-                    "item": {
-                        "@id": "https://minhtuanmobile.com/iphone-11/",
-                        "name": "iPhone 11"
-                    }
-                }, {
-                    "@type": "ListItem",
-                    "position": 5,
-                    "item": {
-                        "@id": "https://minhtuanmobile.com/iphone-11-2019-64gb-ll-a-6-2-6284/",
-                        "name": "iPhone 11 64GB - Chính hãng VN/A - MHDG3VN/A"
-                    }
-                }
-            ]
-        }
-    </script>
-
-
     <div class="container wrapper-container prodetail__main ">
-
-        <form action="https://minhtuanmobile.com/cart/add/" method="post" class="pdinfo_faddcart detail_pdinfo_faddcart">
-
-
+        <form action="<?= base_url() ?>/cart/add/" method="post" class="pdinfo_faddcart detail_pdinfo_faddcart">
             <div class="row">
-
                 <div class="col-12 col-lg-12 col-xl-9 ">
                     <div class="prodetail__wrapper prodetail__overview_imginfo row mx-0">
                         <div class="col-12 col-md-5 prodetail__overview_img">
-                            <!--main carousel element-->
                             <section class="position-relative">
-
                                 <div id="prodimg_carousel" class="owl-carousel owl-theme prodetail__proimg3126 prodetail__proimg3127 boxprobrand__apple pro__group86">
-
                                     <div class="selected prodimg__img img_1" data-item="item__1">
                                         <figure class="m-0">
-                                            <img src="https://cdn.minhtuanmobile.com/uploads/products/210628084521-11-xanh-210617124643-210628084521_thumb.jpg" alt="MHDG3VN A - iPhone 11 64GB - Chính hãng VN A - MHDG3VN A" data-item="prodimg__img1" class="transition" onerror="this.src='https://cdn.minhtuanmobile.com/assets/front/img/default-400_400.jpg'" />
+                                            <img src="<?= base_url() ?>/uploads/products/210628084521-11-xanh-210617124643-210628084521_thumb.jpg" alt="MHDG3VN A - iPhone 11 64GB - Chính hãng VN A - MHDG3VN A" data-item="prodimg__img1" class="transition" onerror="this.src='https://cdn.minhtuanmobile.com/assets/front/img/default-400_400.jpg'" />
                                         </figure>
-
                                     </div>
-
-
-
                                     <div class="prodimg__img img_2" data-item="item__2">
-
                                         <figure class="m-0">
-                                            <img src="https://cdn.minhtuanmobile.com/uploads/products/210510021450-6282.jpg" alt="MHDG3VN A - iPhone 11 64GB - Chính hãng VN A - MHDG3VN A - 2" class="proimg img-responsive" loading="lazy" data-item="prodimg__img2" onerror="this.src='https://cdn.minhtuanmobile.com/assets/front/img/default-400_400.jpg'" />
+                                            <img src="<?= base_url() ?>/uploads/products/210510021450-6282.jpg" alt="MHDG3VN A - iPhone 11 64GB - Chính hãng VN A - MHDG3VN A - 2" class="proimg img-responsive" loading="lazy" data-item="prodimg__img2" onerror="this.src='https://cdn.minhtuanmobile.com/assets/front/img/default-400_400.jpg'" />
                                         </figure>
-
                                     </div>
-
-                                    <div class="prodimg__img img_3" data-item="item__3">
-
-                                        <figure class="m-0">
-                                            <img src="https://cdn.minhtuanmobile.com/uploads/products/210510021453-6282.jpg" alt="MHDG3VN A - iPhone 11 64GB - Chính hãng VN A - MHDG3VN A - 3" class="proimg img-responsive" loading="lazy" data-item="prodimg__img3" onerror="this.src='https://cdn.minhtuanmobile.com/assets/front/img/default-400_400.jpg'" />
-                                        </figure>
-
-                                    </div>
-
-                                    <div class="prodimg__img img_4" data-item="item__4">
-
-                                        <figure class="m-0">
-                                            <img src="https://cdn.minhtuanmobile.com/uploads/products/210510021448-6282.jpg" alt="MHDG3VN A - iPhone 11 64GB - Chính hãng VN A - MHDG3VN A - 4" class="proimg img-responsive" loading="lazy" data-item="prodimg__img4" onerror="this.src='https://cdn.minhtuanmobile.com/assets/front/img/default-400_400.jpg'" />
-                                        </figure>
-
-                                    </div>
-
-                                    <div class="prodimg__img img_5" data-item="item__5">
-
-                                        <figure class="m-0">
-                                            <img src="https://cdn.minhtuanmobile.com/uploads/products/210510021459-6282.jpg" alt="MHDG3VN A - iPhone 11 64GB - Chính hãng VN A - MHDG3VN A - 5" class="proimg img-responsive" loading="lazy" data-item="prodimg__img5" onerror="this.src='https://cdn.minhtuanmobile.com/assets/front/img/default-400_400.jpg'" />
-                                        </figure>
-
-                                    </div>
-
-                                    <div class="prodimg__img img_6" data-item="item__6">
-
-                                        <figure class="m-0">
-                                            <img src="https://cdn.minhtuanmobile.com/uploads/products/210510021502-6282.jpg" alt="MHDG3VN A - iPhone 11 64GB - Chính hãng VN A - MHDG3VN A - 6" class="proimg img-responsive" loading="lazy" data-item="prodimg__img6" onerror="this.src='https://cdn.minhtuanmobile.com/assets/front/img/default-400_400.jpg'" />
-                                        </figure>
-
-                                    </div>
-
-                                    <div class="prodimg__img img_7" data-item="item__7">
-
-                                        <figure class="m-0">
-                                            <img src="https://cdn.minhtuanmobile.com/uploads/products/210510021456-6282.jpg" alt="MHDG3VN A - iPhone 11 64GB - Chính hãng VN A - MHDG3VN A - 7" class="proimg img-responsive" loading="lazy" data-item="prodimg__img7" onerror="this.src='https://cdn.minhtuanmobile.com/assets/front/img/default-400_400.jpg'" />
-                                        </figure>
-
-                                    </div>
-
-
-
                                 </div>
 
                             </section>
@@ -198,124 +64,62 @@
                         </div>
                         <div class="col-12 col-md prodetail__overview_info">
 
-
-
                             <h1 class="prodetail__title" data-id="3126">
-                                iPhone 11 64GB - Chính hãng VN/A - MHDG3VN/A</h1>
+                                iPhone 11 64GB - Chính hãng VN/A - MHDG3VN/A
+                            </h1>
 
                             <p class="prodetail__ttm mb-4 mb-md-4">
                                 <span class="probox__ttm ttm-new">New</span>
                             </p>
 
-
                             <div class="row row-cols-2 row-cols-sm-2 proprice_group ">
-
-
-
                                 <div class="col proprice_item">
-
-                                    <a href="https://minhtuanmobile.com/iphone-11-2019-64gb-vn-a/" class="transition proprice_action active">
+                                    <a href="#" class="transition proprice_action active">
                                         <b style="line-height:1.35">
                                             64GB </b>
                                         <strong class="text_hide">10,490,000đ</strong>
                                     </a>
-
                                 </div>
-
-
                                 <div class="col proprice_item">
-
-                                    <a href="https://minhtuanmobile.com/iphone-11-2019-128gb-vn-a/" class="transition proprice_action ">
+                                    <a href="#" class="transition proprice_action ">
                                         <b style="line-height:1.35">
                                             128GB </b>
                                         <strong class="text_hide">11,990,000đ</strong>
                                     </a>
-
                                 </div>
-
-
                             </div>
                             <fieldset class="proprice_group proprice_color_group pro_guarantee__container">
 
                                 <p class="pro_guarantee__label proprice_item_label f-title mb-0">
-                                    Màu sắc </p>
+                                    Màu sắc
+                                </p>
 
                                 <div class="row align-items-center  ">
-
                                     <div class="col proprice_item proprice_item--img" data-val="iphone-11-2019-64gb-ll-a-6-2-6284">
-
                                         <label class="transition proprice_action active " data-val="iphone-11-2019-64gb-ll-a-6-2-6284" title="Green/Xanh Lá">
-                                            <input type="radio" name="priceitem" value="iphone-11-2019-64gb-ll-a-6-2-6284" required checked="checked" oninvalid="this.setCustomValidity('Vui lòng chọn')">
-
+                                            <input type="radio" name="priceitem" value="iphone-11-2019-64gb-ll-a-6-2-6284" required checked="checked">
                                             <span class="d-flex flex-nowrap proprice_item--img-boxitem">
-                                                <img src="https://cdn.minhtuanmobile.com/uploads/products/210628084521-11-xanh-210617124643.jpg" class="img-responsive " alt="Green/Xanh Lá" onerror="this.src='https://cdn.minhtuanmobile.com/assets/back/img/default.png'" loading="lazy" /> <span class="proprice_item--img-des">
+                                                <img src="<?= base_url() ?>/uploads/products/210628084521-11-xanh-210617124643.jpg" class="img-responsive " alt="Green/Xanh Lá" loading="lazy" /> <span class="proprice_item--img-des">
                                                     <b class="text_hide">Green/Xanh Lá</b>
                                                     10,490,000 đ </span>
                                             </span>
                                         </label>
-
                                     </div>
-
 
                                     <div class="col proprice_item proprice_item--img" data-val="iphone-11-2019-64gb-ll-a-4-2-6288">
-
                                         <label class="transition proprice_action " data-val="iphone-11-2019-64gb-ll-a-4-2-6288" title="Midnight/Đen">
-                                            <input type="radio" name="priceitem" value="iphone-11-2019-64gb-ll-a-4-2-6288" required oninvalid="this.setCustomValidity('Vui lòng chọn')">
+                                            <input type="radio" name="priceitem" value="iphone-11-2019-64gb-ll-a-4-2-6288" required>
 
                                             <span class="d-flex flex-nowrap proprice_item--img-boxitem">
-                                                <img src="https://cdn.minhtuanmobile.com/uploads/products/210620102330-iphone11-black-select-2019.png" class="img-responsive " alt="Midnight/Đen" onerror="this.src='https://cdn.minhtuanmobile.com/assets/back/img/default.png'" loading="lazy" /> <span class="proprice_item--img-des">
+                                                <img src="<?= base_url() ?>/uploads/products/210620102330-iphone11-black-select-2019.png" class="img-responsive " alt="Midnight/Đen" loading="lazy" />
+                                                <span class="proprice_item--img-des">
                                                     <b class="text_hide">Midnight/Đen</b>
-                                                    10,690,000 đ </span>
+                                                    10,690,000 đ
+                                                </span>
                                             </span>
                                         </label>
 
                                     </div>
-
-
-                                    <div class="col proprice_item proprice_item--img" data-val="iphone-11-2019-64gb-ll-a-2-2-6292">
-
-                                        <label class="transition proprice_action " data-val="iphone-11-2019-64gb-ll-a-2-2-6292" title="White/Trắng">
-                                            <input type="radio" name="priceitem" value="iphone-11-2019-64gb-ll-a-2-2-6292" required oninvalid="this.setCustomValidity('Vui lòng chọn')">
-
-                                            <span class="d-flex flex-nowrap proprice_item--img-boxitem">
-                                                <img src="https://cdn.minhtuanmobile.com/uploads/products/210628094148-iphone11-white-select-2019-1.png" class="img-responsive " alt="White/Trắng" onerror="this.src='https://cdn.minhtuanmobile.com/assets/back/img/default.png'" loading="lazy" /> <span class="proprice_item--img-des">
-                                                    <b class="text_hide">White/Trắng</b>
-                                                    10,690,000 đ </span>
-                                            </span>
-                                        </label>
-
-                                    </div>
-
-
-                                    <div class="col proprice_item proprice_item--img" data-val="iphone-11-2019-64gb-ll-a-5-2-6285">
-
-                                        <label class="transition proprice_action " data-val="iphone-11-2019-64gb-ll-a-5-2-6285" title="Purple/Tím">
-                                            <input type="radio" name="priceitem" value="iphone-11-2019-64gb-ll-a-5-2-6285" required oninvalid="this.setCustomValidity('Vui lòng chọn')">
-
-                                            <span class="d-flex flex-nowrap proprice_item--img-boxitem">
-                                                <img src="https://cdn.minhtuanmobile.com/uploads/products/210628094302-iphone11-purple-select-2019.png" class="img-responsive " alt="Purple/Tím" onerror="this.src='https://cdn.minhtuanmobile.com/assets/back/img/default.png'" loading="lazy" /> <span class="proprice_item--img-des">
-                                                    <b class="text_hide">Purple/Tím</b>
-                                                    10,690,000 đ </span>
-                                            </span>
-                                        </label>
-
-                                    </div>
-
-
-                                    <div class="col proprice_item proprice_item--img" data-val="iphone-11-2019-64gb-ll-a-7-6291">
-
-                                        <label class="transition proprice_action " data-val="iphone-11-2019-64gb-ll-a-7-6291" title="Yellow/Vàng">
-                                            <input type="radio" name="priceitem" value="iphone-11-2019-64gb-ll-a-7-6291" required oninvalid="this.setCustomValidity('Vui lòng chọn')">
-
-                                            <span class="d-flex flex-nowrap proprice_item--img-boxitem">
-                                                <img src="https://cdn.minhtuanmobile.com/uploads/products/210628094219-iphone11-yellow-select-2019.png" class="img-responsive " alt="Yellow/Vàng" onerror="this.src='https://cdn.minhtuanmobile.com/assets/back/img/default.png'" loading="lazy" /> <span class="proprice_item--img-des">
-                                                    <b class="text_hide">Yellow/Vàng</b>
-                                                    10,690,000 đ </span>
-                                            </span>
-                                        </label>
-
-                                    </div>
-
 
                                     <div class="col proprice_item proprice_item--img" data-val="iphone-11-2019-64gb-ll-a-3-2-6295">
 
@@ -323,50 +127,34 @@
                                             <input type="radio" name="priceitem" value="iphone-11-2019-64gb-ll-a-3-2-6295" required oninvalid="this.setCustomValidity('Vui lòng chọn')">
 
                                             <span class="d-flex flex-nowrap proprice_item--img-boxitem">
-                                                <img src="https://cdn.minhtuanmobile.com/uploads/products/210628094201-iphone11-red-select-2019.png" class="img-responsive " alt="Red/Đỏ" onerror="this.src='https://cdn.minhtuanmobile.com/assets/back/img/default.png'" loading="lazy" /> <span class="proprice_item--img-des">
+                                                <img src="<?= base_url() ?>/uploads/products/210628094201-iphone11-red-select-2019.png" class="img-responsive " alt="Red/Đỏ" onerror="this.src='<?= base_url() ?>/assets/back/img/default.png'" loading="lazy" /> <span class="proprice_item--img-des">
                                                     <b class="text_hide">Red/Đỏ</b>
                                                     10,690,000 đ </span>
                                             </span>
                                         </label>
-
                                     </div>
-
                                 </div>
-
-
                             </fieldset>
 
-                            <div class="proitem__countdown" data-countdown="187736" data-finish="&lt;span class=&quot;price&quot;&gt;15,990,000 vnđ&lt;/span&gt;" data-percent=""></div>
                             <div class="row mb-3">
 
                                 <div class="col-12 col-md prodetail__pricegroup order-2 order-md-1">
 
                                     <div class="prodetail_pricebox_main">
                                         <div class="b500 text-cap mb-1 prodetail__price_label">
-                                            Giá bán </div>
+                                            Giá bán
+                                        </div>
 
                                         <p class="prodetail__price mb-1">
                                             <b class="price">10,490,000 VNĐ</b><span class="percent_text">Tiết kiệm 5,500,000 đ</span>
                                         </p>
                                     </div>
 
-                                    <div class="prodetail_pricebox_buyonline border-bottom d-none">
-                                        <div class="b500 text-cap mb-1 prodetail__price_label">
-                                            <span class="text-primary bold">MỪNG ĐẠI LỄ 2-9 (Áp dụng từ ngày 31/08 - 07/09)</span>
-                                        </div>
-
-                                        <p class="prodetail__price mb-1">
-                                            <b class="price__buyonline"></b>
-                                        </p>
-                                    </div>
-
                                     <p class="clearfix prodetail__price_orig ">
                                         Giá thị trường:
-                                        15,990,000 vnđ </p>
-
+                                        15,990,000 vnđ
+                                    </p>
                                 </div>
-
-
                             </div>
 
                             <div class="card prodetail__overview__tabinfo mb-3 shadow-sm">
@@ -387,68 +175,48 @@
                                 </div>
                             </div>
 
-
-
                             <section class="prodetail-faction prodetail-faction--addtocart ">
                                 <div class="pdinfo_faddcart_btngroup pdinfo_faddcart_btngroup--addtocart row">
 
-                                    <div class="col-12 mb-3 mb-md-3 ">
+                                    <div class="col-6 mb-4 col-md mb-3 mb-md-0">
                                         <button type="submit" class="btn-pdetail-muangay pdinfo_faddcart__btn pdinfo_faddcart__submit btn shadow-sm ">
-
                                             <b>Mua Ngay</b>
-                                            Ship nội thành trong ngày </button>
+                                            Ship nội thành trong ngày
+                                        </button>
                                     </div>
 
-
-                                    <div class=" col-6 col-md-6 col-md mb-3 mb-md-0">
+                                    <div class="col-6 md-4 col-md mb-3 mb-md-0">
                                         <button type="button" class="btn-pdetail-themgiohang pdinfo_faddcart__btn pdinfo_faddcart__addcart action-addtocart btn shadow-sm " data-reload="false">
                                             <b class="addtocart__text">
                                                 Thêm giỏ hàng <svg class="addtocart__complete" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32">
                                                     <path stroke-dasharray="19.79 19.79" stroke-dashoffset="19.79" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" d="M9,17l3.9,3.9c0.1,0.1,0.2,0.1,0.3,0L23,11" />
                                                 </svg>
                                             </b>
-
-
                                         </button>
-                                    </div>
-
-                                    <div class="col-6 col-md-6 mb-3 mb-md-0">
-                                        <button class="btn-pdetail-tragop pdinfo_faddcart__btn pdinfo_faddcart__modal btn shadow-sm  " type="button" value="ctytaichinh" data-bs-toggle="modal" data-bs-target="#modal_tragop">
-                                            <b>Mua Trả góp</b>
-                                            Xét duyệt nhanh chóng </button>
                                     </div>
 
                                 </div>
                                 <div class="pdinfo_faddcart_btngroup pdinfo_faddcart_btngroup--modal row ">
-
                                     <div class="col-12 col-12 col-md-12 mb-3 mb-md-0 ">
                                         <button type="button" class="btn-pdetail-modal-quantam pdinfo_faddcart__btn pdinfo_faddcart__submit pdkeotom_care bg-primary btn shadow-sm " data-bs-toggle="modal" data-bs-target="#modal_procare">
                                             <b>Quan tâm</b>
                                             Liên hệ đặt hàng & nhận thông tin
-                                            </a>
                                     </div>
-
-
                                 </div>
                             </section>
 
                             <input type="hidden" name="prodetail_checkin" value="iphone-11-2019-64gb-ll-a-6-2-6284" />
                             <input type="hidden" name="prodetail_qty" value="1" />
 
-
-
-                            <p>
-                                <a href="https://minhtuanmobile.com/trade-in/?code=iphone-11-2019-64gb-ll-a-6-2-6284" class="href_protradein">
-                                    Đổi cũ mua mới - iPhone 11 64GB - Chính hãng VN/A - MHDG3VN/A </a>
-                            </p>
                             <div class="prodetail__overview_img__quote d-block d-md-none mt-0 pt-3">
-                                <p class="f-title prodetail__overview_img__quote__label">Thông tin thêm về sản phẩm</p>✔️Máy mới Fullbox 100% - Chưa Active - Chính Hãng Apple <br />
-                                ✔️Được hỗ trợ 1 đổi 1 trong 7 ngày nếu có lỗi từ nhà sản xuất<br />
+                                <p class="f-title prodetail__overview_img__quote__label">Thông tin thêm về sản phẩm</p>
+                                ✔️Máy mới Fullbox 100% - Chưa Active - Chính Hãng Apple <br />
+                                ✔️Được hỗ trợ 1 đổi 1 trong 7 ngày nếu có lỗi từ nhà sản xuất<br>
                                 ✔️Bảo hành chính hãng Apple 12 tháng
                             </div>
                             <div class="prodetail__overview_img__quote d-none d-md-block">
                                 <p class="f-title prodetail__overview_img__quote__label">Thông tin thêm về sản phẩm</p>✔️Máy mới Fullbox 100% - Chưa Active - Chính Hãng Apple <br />
-                                ✔️Được hỗ trợ 1 đổi 1 trong 7 ngày nếu có lỗi từ nhà sản xuất<br />
+                                ✔️Được hỗ trợ 1 đổi 1 trong 7 ngày nếu có lỗi từ nhà sản xuất<br>
                                 ✔️Bảo hành chính hãng Apple 12 tháng
                             </div>
                         </div>
@@ -456,190 +224,12 @@
                 </div>
                 <div class="col-12 col-lg-12 col-xl-3">
 
-
-                    <div class="prodetail__wrapper prodetail__overview_imginfo prodetail__overview_imginfo_store">
-
-                        <div class="pdinfo_faddcart_textsupport border-bottom sticky-top bg-white shadow-sm">
-                            <p class="text-cap mb-0">hệ thống cửa hàng</p>
-                        </div>
-
-                        <ul class="prodetail__liststore">
-
-                            <li class="prodetail__liststore_header">Hồ Chí Minh</li>
-                            <li>
-
-
-                                39 - 43 Trần Quang ...Quận 1
-
-
-                            </li>
-
-
-
-                            <li>
-
-
-                                179 Khánh Hội, Phường 3, Quận 4
-
-
-                            </li>
-
-
-
-                            <li>
-
-
-                                93 Nguyễn Ảnh Thủ, P.Trung ...Quận 12
-
-
-                            </li>
-
-
-
-                            <li>
-
-
-                                297 Đường 3/2, Phường 10, Quận 10
-
-
-                            </li>
-
-
-
-                            <li>
-
-
-                                488 Lê Hồng Phong, Phường ...Quận 10
-
-
-                            </li>
-
-
-
-                            <li>
-
-
-                                539 Quang Trung, P.10, Q. Gò Vấp
-
-
-                            </li>
-
-
-
-                            <li>
-
-
-                                475 Phan Văn Trị, P.5, ...Gò Vấp
-
-
-                            </li>
-
-
-
-                            <li>
-
-
-                                287 Xô Viết Nghệ Tĩnh, ...Q.Bình Thạnh
-
-
-                            </li>
-
-
-
-                            <li>
-
-
-                                429 Hoàng Văn Thụ, P.2, ...Tân Bình
-
-
-                            </li>
-
-
-
-                            <li>
-
-
-                                83 Võ Văn Ngân, P. ...Thủ Đức
-
-
-                            </li>
-
-
-
-                            <li>
-
-
-                                910 Âu Cơ, P.14, Q. Tân Bình
-
-
-                            </li>
-
-
-
-                            <li>
-
-
-                                112 Lê Văn Việt, P. ...Thủ Đức
-
-
-                            </li>
-
-
-
-                            <li class="prodetail__liststore_header">Đà Nẵng</li>
-                            <li>
-
-
-                                163 Hàm Nghi, P. Linh ...Q.Thanh Khê
-
-
-                            </li>
-
-
-
-                            <li class="prodetail__liststore_header">Lâm Đồng</li>
-                            <li>
-
-
-                                123 Phan Đình Phùng, P.1, Đà Lạt
-
-
-                            </li>
-
-
-
-                            <li>
-
-
-                                373 Trần Phú, P. Lộc ...Bảo Lộc
-
-
-                            </li>
-
-
-
-
-                        </ul>
-
-
-                    </div>
-
-
-
                     <div class="prodetail__wrapper prodetail__overview_imginfo prodetail__overview_imginfo_right pt-4">
-
-
                         <div class="prodetail__overview__right_tabinfo">
 
                             <div class="pdinfo_faddcart_textsupport clearfix">
                                 <p>Hỗ trợ SHIP COD - Giao hàng tận nơi.</p>
                             </div>
-
-
-
-
-
-
                             <hr>
                             <div class="prodetail__overview__tabinfo">
                                 <div class="dcontent">
@@ -657,43 +247,26 @@
                                 </div>
                             </div>
 
-
                             <hr class="d-block d-lg-none">
                             <div class="prodetail__overview__tabinfo mb-3 d-block d-lg-none">
                                 <div class="prodetail__overview_img__quote__label mb-2">
                                     Mua máy bạn sẽ được hỗ trợ </div>
                                 <div class="dcontent">
                                     <p>✔️Trả g&oacute;p 0% qua thẻ t&iacute;n dụng.</p>
-
                                     <p>✔️Trả g&oacute;p l&atilde;i suất thấp&nbsp;qua c&aacute;c c&ocirc;ng ty T&agrave;i ch&iacute;nh</p>
-
                                     <p>✔️Đặt h&agrave;ng online &ndash; Thanh to&aacute;n tại nh&agrave;</p>
-
                                     <p>✔️Thời gian giao h&agrave;ng nhanh ch&oacute;ng</p>
-
                                     <p>➖Nội th&agrave;nh&nbsp;Tp.HCM: Giao nhanh trong 2h</p>
-
                                     <p>➖C&aacute;c tỉnh th&agrave;nh kh&aacute;c: Nhận h&agrave;ng 1 &ndash; 3 <strong>ng&agrave;y</strong></p>
-
                                     <div class="table-responsive">&nbsp;</div>
-
                                     <div class="table-responsive">&nbsp;</div>
-
                                     <p>&nbsp;</p>
                                 </div>
                             </div>
-
-
-
                         </div>
                     </div>
-
-
                 </div>
-
             </div>
-
-
             <section class="hpro__saleoff hbox-highlight home-boxproduct">
 
                 <p class="hboxproduct__title">Người dùng thường mua kèm</p>
@@ -709,7 +282,7 @@
                                 <div class="probox__img">
 
                                     <figure class="mb-0 position-relative">
-                                        <img src="https://cdn.minhtuanmobile.com/uploads/products/211-220825081130-220825081130_thumb.jpg" alt="iPhone 11 64GB - Chính hãng VN/A" class="img-full img-responsive" onerror="this.src='https://cdn.minhtuanmobile.com/assets/front/img/default-400_400.jpg'" loading="lazy">
+                                        <img src="<?= base_url() ?>/uploads/products/211-220825081130-220825081130_thumb.jpg" alt="iPhone 11 64GB - Chính hãng VN/A" class="img-full img-responsive" onerror="this.src='https://cdn.minhtuanmobile.com/assets/front/img/default-400_400.jpg'" loading="lazy">
                                     </figure>
                                     <span class="percent"><i class="fa fa-star"></i>Tiết kiệm 5,500,000đ</span><span class="percent_tag">Giảm 35%</span>
                                 </div>
@@ -720,22 +293,16 @@
 
                                 </div>
                             </a>
-
-
                         </div>
-
-
                     </div>
 
                     <div class="item proitem prosaleoff__item">
-
-
                         <div class="probox  boxproid__3148 boxprobrand__apple boxprotype__product pro__group86">
                             <a href="https://minhtuanmobile.com/iphone-11-2019-128gb-vn-a/" class="box">
                                 <div class="probox__img">
 
                                     <figure class="mb-0 position-relative">
-                                        <img src="https://cdn.minhtuanmobile.com/uploads/products/photo-2022-08-25-08-12-25-220825081234-220825081234_thumb.jpg" alt="iPhone 11 128GB -  Chính hãng VN/A" class="img-full img-responsive" onerror="this.src='https://cdn.minhtuanmobile.com/assets/front/img/default-400_400.jpg'" loading="lazy">
+                                        <img src="<?= base_url() ?>/uploads/products/photo-2022-08-25-08-12-25-220825081234-220825081234_thumb.jpg" alt="iPhone 11 128GB -  Chính hãng VN/A" class="img-full img-responsive" onerror="this.src='https://cdn.minhtuanmobile.com/assets/front/img/default-400_400.jpg'" loading="lazy">
                                     </figure>
                                     <span class="percent"><i class="fa fa-star"></i>Tiết kiệm 4,500,000đ</span><span class="percent_tag">Giảm 28%</span>
                                 </div>
@@ -746,34 +313,17 @@
 
                                 </div>
                             </a>
-
-
                         </div>
-
-
                     </div>
-
-
-
                 </div>
-
-
             </section>
 
-
-
-
             <div class="prodetail__wrapper prodetail__context row mb-4">
-
                 <div class="col-12 prodetail__text_container col-lg-8 order-2 order-lg-1 ps-0 pe-3 pe-xl-5">
-
                     <section class="prodetail__box">
-
                         <p class="prodetail__boxtitle">Thông tin sản phẩm</p>
-
                         <div class="prodetail__box__content">
                             <div class="dcontent prodetail__box__content_collapse">
-
                                 <div class="clearfix">
                                     <p>Đ&uacute;ng như những đồn đo&aacute;n, bộ 3 si&ecirc;u phẩm iPhone 11, <a href="https://minhtuanmobile.com/iphone-11-pro/">iPhone 11 Pro</a>, iPhone 11 Pro Max đ&atilde; được Apple giới thiệu v&agrave;o th&aacute;ng 9/2019. Trong đ&oacute; <a href="https://minhtuanmobile.com/iphone-11/">iPhone 11</a> đạt ti&ecirc;u chuẩn số đ&ocirc;ng với mức gi&aacute; v&ocirc; c&ugrave;ng &ldquo;dễ chịu&rdquo; với những n&acirc;ng cấp tối ưu v&agrave; mạnh mẽ. <a href="https://minhtuanmobile.com/iphone-11-2019-64gb-vn-a">iPhone 11 64GB</a> l&agrave; phi&ecirc;n bản dung lượng nhỏ nhất trong c&aacute;c phi&ecirc;n bản iPhone 11 năm nay.</p>
 
@@ -861,9 +411,6 @@
 
                                     <p style="text-align:center"><a href="https://minhtuanmobile.com/iphone-11-pro-max/" target="_self">MUA NGAY IPHONE 11 PRO MAX CH&Iacute;NH H&Atilde;NG VN/A</a></p>
                                 </div>
-
-
-
                             </div>
                             <p class="mb-0 text-center">
                                 <button type="button" class="prodetail__box__content_action runjs">
@@ -871,34 +418,12 @@
                                     <span class="show-min">Thu gọn</span>
                                 </button>
                             </p>
-
-                        </div>
-
-                        <hr class="line">
-
-                        <div class="clearfix text-center mb-4">
-                            <button type="submit" class="btn-pdetail-muangay--short pdinfo_faddcart__btn pdinfo_faddcart__submit btn shadow-sm ">
-                                <b>Mua Ngay</b>
-                                Ship nội thành trong ngày </button>
-                        </div>
-
-                        <div class="prodetail__box__content">
-                            <div class="fb_comments">
-
-                                <div class="fb-comments" data-href="https://minhtuanmobile.com/iphone-11-2019-64gb-ll-a-6-2-6284/" data-width="100%" data-numposts="10" loading="lazy"></div>
-
-
-                            </div>
                         </div>
                     </section>
-
                 </div>
                 <div class="col-12 col-lg order-1 order-lg-2 mb-3 mb-lg-0 px-0">
-
                     <section class="prodetail__box">
-
                         <p class="prodetail__boxtitle">Thông số kỹ thuật</p>
-
                         <div class="prodetail__box__content prodetail__boxtechnology">
                             <div class="dcontent prodetail__box__content_collapse">
                                 <table id="tskt" style="height:210px; width:73.4052%">
@@ -985,7 +510,7 @@
                             <div class="probox__img">
 
                                 <figure class="mb-0 position-relative">
-                                    <img src="https://cdn.minhtuanmobile.com/uploads/products/211-220825081130-220825081130_thumb.jpg" alt="iPhone 11 64GB - Chính hãng VN/A" class="img-full img-responsive" onerror="this.src='https://cdn.minhtuanmobile.com/assets/front/img/default-400_400.jpg'" loading="lazy">
+                                    <img src="<?= base_url() ?>/uploads/products/211-220825081130-220825081130_thumb.jpg" alt="iPhone 11 64GB - Chính hãng VN/A" class="img-full img-responsive" onerror="this.src='https://cdn.minhtuanmobile.com/assets/front/img/default-400_400.jpg'" loading="lazy">
                                 </figure>
                                 <span class="percent"><i class="fa fa-star"></i>Tiết kiệm 5,500,000đ</span><span class="percent_tag">Giảm 35%</span>
                             </div>
@@ -1011,7 +536,7 @@
                             <div class="probox__img">
 
                                 <figure class="mb-0 position-relative">
-                                    <img src="https://cdn.minhtuanmobile.com/uploads/products/photo-2022-08-25-08-12-25-220825081234-220825081234_thumb.jpg" alt="iPhone 11 128GB -  Chính hãng VN/A" class="img-full img-responsive" onerror="this.src='https://cdn.minhtuanmobile.com/assets/front/img/default-400_400.jpg'" loading="lazy">
+                                    <img src="<?= base_url() ?>/uploads/products/photo-2022-08-25-08-12-25-220825081234-220825081234_thumb.jpg" alt="iPhone 11 128GB -  Chính hãng VN/A" class="img-full img-responsive" onerror="this.src='https://cdn.minhtuanmobile.com/assets/front/img/default-400_400.jpg'" loading="lazy">
                                 </figure>
                                 <span class="percent"><i class="fa fa-star"></i>Tiết kiệm 4,500,000đ</span><span class="percent_tag">Giảm 28%</span>
                             </div>
@@ -1045,7 +570,7 @@
 
                 <div class="homebanner__item text__ intro_item110  ">
                     <a href="https://minhtuanmobile.com/apple-watch/" target="_self">
-                        <img src="https://cdn.minhtuanmobile.com/uploads/slide/apple-watch-220315043059.png" alt="Apple Watch" />
+                        <img src="<?= base_url() ?>/uploads/slide/apple-watch-220315043059.png" alt="Apple Watch" />
                     </a>
                 </div>
 
@@ -1057,7 +582,7 @@
 
                 <div class="homebanner__item text__ intro_item109  ">
                     <a href="https://minhtuanmobile.com/" target="_self">
-                        <img src="https://cdn.minhtuanmobile.com/uploads/slide/ship-nhanh-trong-1h-220315043050.png" alt="Ship nhanh trong 1h" />
+                        <img src="<?= base_url() ?>/uploads/slide/ship-nhanh-trong-1h-220315043050.png" alt="Ship nhanh trong 1h" />
                     </a>
                 </div>
 
@@ -1069,7 +594,7 @@
 
                 <div class="homebanner__item text__ intro_item106  ">
                     <a href="https://simso.minhtuanmobile.com/" target="_blank">
-                        <img src="https://cdn.minhtuanmobile.com/uploads/slide/sim-220723092319.png" alt="Sim" />
+                        <img src="<?= base_url() ?>/uploads/slide/sim-220723092319.png" alt="Sim" />
                     </a>
                 </div>
 
@@ -1121,69 +646,6 @@
             });
         </script>
 
-
-        <section class="hpro__bestseller hbox-gray home-boxproduct prodetail_other_contaner">
-
-            <p class="hboxproduct__title">Bạn vừa xem</p>
-
-
-            <div class="row row-cols-2 row-cols-sm-4 row-cols-lg-5 row-cols-xl-5 product__container">
-
-
-                <div class="col proitem">
-
-
-                    <div class="probox  boxproid__3126 boxprobrand__apple boxprotype__productpricecolor pro__group86">
-                        <a href="https://minhtuanmobile.com/iphone-11-2019-64gb-ll-a-6-2-6284/" class="box">
-                            <div class="probox__img">
-
-                                <figure class="mb-0 position-relative">
-                                    <img src="https://cdn.minhtuanmobile.com/uploads/products/210628084521-11-xanh-210617124643-210628084521_thumb.jpg" alt="iPhone 11 64GB - Chính hãng VN/A - MHDG3VN/A" class="img-full img-responsive" onerror="this.src='https://cdn.minhtuanmobile.com/assets/front/img/default-400_400.jpg'" loading="lazy">
-                                </figure>
-                                <span class="percent"><i class="fa fa-star"></i>Tiết kiệm 5,500,000đ</span><span class="percent_tag">Giảm 35%</span>
-                                <div method="post" action="https://minhtuanmobile.com/cart/add/" class="pro__addtocart product-add-cart">
-                                    <div class="overflow">
-                                        <span class="btn-action">
-                                            <button type="submit" class="action-addtocart btn-hover hover" data-val="iphone-11-2019-64gb-ll-a-6-2-6284">
-                                                <span class="addtocart__text">
-                                                    <i class="fa fa-shopping-cart"></i>
-                                                    Mua Ngay </span>
-                                                <svg class="addtocart__complete" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32">
-                                                    <path stroke-dasharray="19.79 19.79" stroke-dashoffset="19.79" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" d="M9,17l3.9,3.9c0.1,0.1,0.2,0.1,0.3,0L23,11" />
-                                                </svg>
-                                            </button>
-                                        </span>
-                                    </div>
-                                    <input type="hidden" name="qty" value="1" />
-                                    <input type="hidden" name="checkin" value="iphone-11-2019-64gb-ll-a-6-2-6284" />
-                                </div>
-                            </div>
-
-                            <div class="probox__des  ">
-                                <div class="proitem__countdown" data-countdown="187736" data-finish="&lt;span class=&quot;price&quot;&gt;15,990,000 vnđ&lt;/span&gt;" data-percent=""></div>
-                                <h3 class="probox__title">iPhone 11 64GB - Chính hãng VN/A - MHDG3VN/A</h3>
-                                <p class="probox__price"><b class="price">10,490,000 VNĐ</b><s>15,990,000 VNĐ</s></p>
-
-                            </div>
-                        </a>
-
-
-                    </div>
-
-
-                </div>
-
-
-
-
-
-
-            </div>
-
-
-        </section>
-
-
     </div>
 
 
@@ -1202,7 +664,7 @@
                             <tbody>
                                 <tr>
                                     <td style="height:21px; width:43.9024%">H&atilde;ng sản xuất</td>
-                                    <td style="height:21px; width:93.9024%">Apple</td>
+                                    <td style="height:21px; width:93.9024%">Applesss</td>
                                 </tr>
                                 <tr>
                                     <td style="height:21px; width:43.9024%">Bộ nhớ đệm / Ram</td>
@@ -1254,38 +716,6 @@
             </div>
         </div>
     </div>
-    <!-- Modal -->
-    <div class="modal fade modal_mtm" id="modal_tragop" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Tư vấn & hỗ trợ</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="mb-3">
-                        Bạn cần tư vấn & hỗ trợ về HÌNH THỨC MUA HÀNG TRẢ GÓP tại Minh Tuấn Mobile </div>
-                    <div class="row g-3">
-                        <span class="col-12 col-md-6">
-                            <a href="tel:1900 3355" class="btn-modal_tragop--hotline pdinfo_faddcart__btn pdinfo_faddcart__submit btn shadow-sm">
-
-                                <b><i class="fa fa-phone-volume me-1"></i>1900 3355</b>
-                                Tư vấn trả góp ngay </a>
-                        </span>
-                        <span class="col-12 col-md-6">
-                            <button class="btn-modal_tragop--tragop pdinfo_faddcart__btn pdinfo_faddcart__modal btn shadow-sm" type="button" value="ctytaichinh">
-                                <b>Bảng tính trả góp</b>
-                                Xem trước về hình thức mua trả góp </a>
-                            </button>
-
-                    </div>
-
-
-                </div>
-            </div>
-        </div>
-    </div>
-
 
     <!-- Modal -->
     <div class="modal fade modal_procare" id="modal_procare" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modal_procareLabel" aria-hidden="true">
@@ -1397,20 +827,6 @@
         var proprice = new Map();
         proprice.set('iphone-11-2019-64gb-ll-a-6-2-6284', {
             title: 'iPhone 11 64GB - Chính hãng VN/A - MHDG3VN/A',
-            price: 'Giá thị trường: 15,990,000 vnđ',
-            active: 10490000,
-            text: '<b class="price">10,490,000 VNĐ</b><span class="percent_text">Tiết kiệm 5,500,000 đ</span>',
-            buyonline: '10,490,000 vnđ',
-            buyonline_label: '<span class="text-primary bold">MỪNG ĐẠI LỄ 2-9 (Áp dụng từ ngày 31/08 - 07/09)</span>',
-            status: '1',
-            price_label: 'Giá bán',
-            status_text: '<b class="btn btn-sm btn-primary pro__instock"><i class="fas fa-check-circle"></i>&nbsp;Còn hàng</b>',
-            img: 'https://cdn.minhtuanmobile.com/uploads/products/210628084521-11-xanh-210617124643.jpg',
-            color: 'Green/Xanh Lá',
-            option: ''
-        });
-        proprice.set('iphone-11-2019-64gb-ll-a-6-2-6284', {
-            title: 'iPhone 11 64GB - Chính hãng VN/A - MHDG3VN/A',
             price: "Giá thị trường: 15,990,000 vnđ",
             active: 10490000,
             text: '<b class="price">10,490,000 VNĐ</b><span class="percent_text">Tiết kiệm 5,500,000 đ</span>',
@@ -1420,7 +836,7 @@
             status: '1',
             price_label: 'Giá bán',
             status_text: '<b class="btn btn-sm btn-primary pro__instock"><i class="fas fa-check-circle"></i>&nbsp;Còn hàng</b>',
-            img: 'https://cdn.minhtuanmobile.com/uploads/products/210628084521-11-xanh-210617124643.jpg',
+            img: '<?= base_url() ?>/uploads/products/210628084521-11-xanh-210617124643.jpg',
             color: 'Green/Xanh Lá',
             option: '',
 
@@ -1436,56 +852,8 @@
             status: '1',
             price_label: 'Giá bán',
             status_text: '<b class="btn btn-sm btn-primary pro__instock"><i class="fas fa-check-circle"></i>&nbsp;Còn hàng</b>',
-            img: 'https://cdn.minhtuanmobile.com/uploads/products/210620102330-iphone11-black-select-2019.png',
+            img: '<?= base_url() ?>/uploads/products/210620102330-iphone11-black-select-2019.png',
             color: 'Midnight/Đen',
-            option: '',
-
-        });
-        proprice.set('iphone-11-2019-64gb-ll-a-2-2-6292', {
-            title: 'iPhone 11 64GB - Chính hãng VN/A - MHDG3VN/A',
-            price: "Giá thị trường: 15,990,000 vnđ",
-            active: 10690000,
-            text: '<b class="price">10,690,000 VNĐ</b><span class="percent_text">Tiết kiệm 5,300,000 đ</span>',
-            buyonline: '',
-            buyonline_label: '<span class="text-primary bold">Giá SHIP COD</span>',
-
-            status: '1',
-            price_label: 'Giá bán',
-            status_text: '<b class="btn btn-sm btn-primary pro__instock"><i class="fas fa-check-circle"></i>&nbsp;Còn hàng</b>',
-            img: 'https://cdn.minhtuanmobile.com/uploads/products/210628094148-iphone11-white-select-2019-1.png',
-            color: 'White/Trắng',
-            option: '',
-
-        });
-        proprice.set('iphone-11-2019-64gb-ll-a-5-2-6285', {
-            title: 'iPhone 11 64GB - Chính hãng VN/A - MHDG3VN/A',
-            price: "Giá thị trường: 15,990,000 vnđ",
-            active: 10690000,
-            text: '<b class="price">10,690,000 VNĐ</b><span class="percent_text">Tiết kiệm 5,300,000 đ</span>',
-            buyonline: '',
-            buyonline_label: '<span class="text-primary bold">Giá SHIP COD</span>',
-
-            status: '1',
-            price_label: 'Giá bán',
-            status_text: '<b class="btn btn-sm btn-primary pro__instock"><i class="fas fa-check-circle"></i>&nbsp;Còn hàng</b>',
-            img: 'https://cdn.minhtuanmobile.com/uploads/products/210628094302-iphone11-purple-select-2019.png',
-            color: 'Purple/Tím',
-            option: '',
-
-        });
-        proprice.set('iphone-11-2019-64gb-ll-a-7-6291', {
-            title: 'iPhone 11 64GB - Chính hãng VN/A - MHDG3VN/A',
-            price: "Giá thị trường: 15,990,000 vnđ",
-            active: 10690000,
-            text: '<b class="price">10,690,000 VNĐ</b><span class="percent_text">Tiết kiệm 5,300,000 đ</span>',
-            buyonline: '',
-            buyonline_label: '<span class="text-primary bold">Giá SHIP COD</span>',
-
-            status: '1',
-            price_label: 'Giá bán',
-            status_text: '<b class="btn btn-sm btn-primary pro__instock"><i class="fas fa-check-circle"></i>&nbsp;Còn hàng</b>',
-            img: 'https://cdn.minhtuanmobile.com/uploads/products/210628094219-iphone11-yellow-select-2019.png',
-            color: 'Yellow/Vàng',
             option: '',
 
         });
@@ -1500,13 +868,12 @@
             status: '',
             price_label: 'Giá bán',
             status_text: '<b class="btn btn-sm btn-warning pro__instock"><i class="fas fa-minus-circle"></i>&nbsp;Tạm hết hàng</b>',
-            img: 'https://cdn.minhtuanmobile.com/uploads/products/210628094201-iphone11-red-select-2019.png',
+            img: '<?= base_url() ?>/uploads/products/210628094201-iphone11-red-select-2019.png',
             color: 'Red/Đỏ',
             option: '',
 
         }); //console.log( proprice);
         var prodetail_current = 'iphone-11-2019-64gb-ll-a-6-2-6284';
-        console.log(prodetail_current);
         $(window).load(function(e) {
             //-------------
             var _owl_finish = $("#prodimg_carousel");
@@ -1548,7 +915,6 @@
                     $('.prodetail__price_orig').html(priceitem['price']).show();
                     $('.prodetail_pricebox_main .prodetail__price').html(priceitem['text']);
                     $('.prodetail_pricebox_main .prodetail__price .price').html((amount > 0 ? format_number(amount) + ' VNĐ' : 'Liên hệ'));
-                    console.log(priceitem);
                     if (priceitem['buyonline'] && parseInt(priceitem['buyonline']) > 0) {
                         $('.prodetail_pricebox_buyonline .price__buyonline').html(priceitem['buyonline']);
                         $('.prodetail_pricebox_buyonline .prodetail__price_label').html(priceitem['buyonline_label']);
@@ -1590,23 +956,6 @@
                 var amount = parseInt(price_current) + parseInt(guarantee_current);
                 $('.prodetail__price .price').html(format_number(amount) + ' VNĐ');
                 //-------------
-            });
-            //---------------
-            $('#modal_tragop .pdinfo_faddcart__modal').bind('click', function() {
-
-                var price_color = $('.proprice_item .proprice_action.active').eq(0);
-                var _tab = $(this).attr('value');
-                var _href = $(this).attr('href');
-                var _href_uri = price_color.length > 0 ? price_color.data('val') : false;
-                _href_uri = _href_uri ? _href_uri : $('input[name=prodetail_checkin]').val();
-                if (_href_uri) {
-                    var _href_redirect = site_url + 'mua-tra-gop/' + _href_uri + '/?method=' + _tab;
-                    //console.log( _href_redirect );
-                    window.location.href = _href_redirect;
-                    return false;
-                } else {
-                    alert('Không tìm thấy thông tin sản phẩm. Vui lòng F5 thử lại!');
-                }
             });
             //--------------------
             //-----------------------
