@@ -1,0 +1,225 @@
+
+body {
+    overscroll-behavior-y: none;
+    -webkit-overflow-scrolling: auto;
+}
+
+/***220620 - add menu: macbook m2*************/
+.navigation img {
+    height: 17px
+}
+
+.is-sticky .navigation img {
+    height: 15px
+}
+
+.is-sticky .navigation a {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    .navigation a {
+        position: relative;
+        padding: 10px 15px 7px;
+        font-size: 12px;
+    }
+
+    .navigation>li.nav-logo>a {
+        padding-right: 0;
+    }
+
+    .navigation>li.nav-logo>a::after {
+        display: none
+    }
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1300px) {
+    .navigation a {
+        font-size: 12px;
+    }
+
+    .navigation img {
+        height: 15px;
+    }
+
+    .is-sticky .navigation img {
+        height: 13px
+    }
+
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1400px) {
+    .navigation img {
+        height: 16px;
+    }
+
+    .is-sticky .navigation a {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .navigation a {
+        padding-left: 13px;
+        padding-right: 13px;
+    }
+
+}
+
+/*** END - 220620 - add menu: macbook m2*************/
+
+/***220616*************/
+body.page-home .proitem .percent,
+body.page-home .proitem .probox__img::after {
+    display: none
+}
+
+/***211105*************/
+.boxproid__13177 .probox__img>figure::before,
+.prodetail__proimg13177 .owl-stage-outer::after,
+.boxproid__13175_ .probox__img>figure::before,
+.prodetail__proimg13175_ .owl-stage-outer::after,
+.boxproid__13176_ .probox__img>figure::before,
+.prodetail__proimg13176_ .owl-stage-outer::after,
+.boxproid__13168 .probox__img>figure::before,
+.prodetail__proimg13168 .owl-stage-outer::after,
+.boxproid__13133 .probox__img>figure::before,
+.prodetail__proimg13133 .owl-stage-outer::after,
+.boxproid__13132 .probox__img>figure::before,
+.prodetail__proimg13132 .owl-stage-outer::after,
+.boxproid__13062 .probox__img>figure::before,
+.prodetail__proimg13062 .owl-stage-outer::after,
+
+.boxproid__12880 .probox__img>figure::before,
+.prodetail__proimg12880 .owl-stage-outer::after {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 2;
+    content: "";
+    display: block;
+    width: 42%;
+    height: 22px;
+    background: url(https://minhtuanmobile.com/assets/tags/co-san-hang_yellow.png) no-repeat right top;
+    background-size: contain;
+}
+
+.prodetail__proimg13177 .owl-stage-outer::after,
+.prodetail__proimg13175 .owl-stage-outer::after,
+.prodetail__proimg13176 .owl-stage-outer::after,
+.prodetail__proimg13168 .owl-stage-outer::after,
+.prodetail__proimg13133 .owl-stage-outer::after,
+.prodetail__proimg13132 .owl-stage-outer::after,
+.prodetail__proimg13062 .owl-stage-outer::after,
+
+.prodetail__proimg12880 .owl-stage-outer::after {
+    height: 30px;
+}
+
+.prodetail__proimg13175 .owl-stage-outer::after,
+.prodetail__proimg13176 .owl-stage-outer::after {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 2;
+    content: "";
+    display: block;
+    width: 42%;
+    height: 30px;
+    background: url(https://minhtuanmobile.com/assets/tags/co-san-hang_yellow.png) no-repeat right top;
+    background-size: contain;
+}
+
+
+
+/***********DA CO HANG - 2022-04-15***********/
+.boxproid__13911 .probox__img>figure::before,
+.prodetail__proimg13911 .owl-stage-outer::after,
+.boxproid__13912 .probox__img>figure::before,
+.prodetail__proimg13912 .owl-stage-outer::after,
+
+.prodetail__proimg13878 .owl-stage-outer::after,
+.prodetail__proimg13872 .owl-stage-outer::after,
+.prodetail__proimg13864 .owl-stage-outer::after,
+.prodetail__proimg13820 .owl-stage-outer::after,
+.prodetail__proimg13813 .owl-stage-outer::after,
+.prodetail__proimg13852 .owl-stage-outer::after,
+.prodetail__proimg13846 .owl-stage-outer::after,
+.prodetail__proimg13840 .owl-stage-outer::after,
+.prodetail__proimg13878 .owl-stage-outer::after,
+.prodetail__proimg13891 .owl-stage-outer::after,
+.prodetail__proimg13884 .owl-stage-outer::after,
+.prodetail__proimg14044 .owl-stage-outer::after,
+.prodetail__proimg14049 .owl-stage-outer::after,
+.boxproid__14049 .probox__img>figure::before,
+.boxproid__14044 .probox__img>figure::before,
+.boxproid__13884 .probox__img>figure::before,
+.boxproid__13891 .probox__img>figure::before,
+.boxproid__13872 .probox__img>figure::before,
+.boxproid__13864 .probox__img>figure::before,
+.boxproid__13820 .probox__img>figure::before,
+.boxproid__13813 .probox__img>figure::before,
+.boxproid__13852 .probox__img>figure::before,
+.boxproid__13846 .probox__img>figure::before,
+.boxproid__13840 .probox__img>figure::before,
+.boxproid__13878 .probox__img>figure::before {
+    position: absolute;
+    right: 0px;
+    top: 0;
+    z-index: 1;
+    content: "";
+    display: block;
+    width: 45%;
+    height: 18px;
+    background: url('https://minhtuanmobile.com/assets/tags/da-co-hang-40.png') no-repeat right top;
+    background-size: contain;
+}
+
+.prodetail__proimg13911 .owl-stage-outer::after,
+.prodetail__proimg13912 .owl-stage-outer::after,
+
+.prodetail__proimg14049 .owl-stage-outer::after,
+.prodetail__proimg14044 .owl-stage-outer::after,
+.prodetail__proimg13884 .owl-stage-outer::after,
+.prodetail__proimg13891 .owl-stage-outer::after,
+.prodetail__proimg13872 .owl-stage-outer::after,
+.prodetail__proimg13864 .owl-stage-outer::after,
+.prodetail__proimg13820 .owl-stage-outer::after,
+.prodetail__proimg13813 .owl-stage-outer::after,
+.prodetail__proimg13852 .owl-stage-outer::after,
+.prodetail__proimg13846 .owl-stage-outer::after,
+.prodetail__proimg13840 .owl-stage-outer::after,
+.prodetail__proimg13878 .owl-stage-outer::after {
+    height: 26px;
+}
+
+
+/**210818**********/
+.prodetail__overview_imginfo .prodimg__img figure::after,
+.probox__img::after {
+    background-image: url('https://minhtuanmobile.com/assets/tags/freeship-2h.png')
+}
+
+.fb_dialog iframe {
+    right: 10px !important;
+    bottom: 150px !important;
+}
+
+#michat_iframe {
+    right: 0;
+    bottom: 60px !important;
+}
+
+/**220117 - hide logo apple - maycu**********/
+.pro__group806.boxprobrand__apple .owl-stage-outer::before,
+.pro__group806.boxprobrand__apple .probox__img::before {
+    display: none !important
+}
+
+/**220118 - responsive**********/
+@media screen and (min-width: 1201px) and (max-width: 1400px) {
+    .navigation a {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+}
