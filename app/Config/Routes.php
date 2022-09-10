@@ -40,8 +40,10 @@ $routes->group('san-pham', function ($routes) {
     $routes->get('/', 'Product ::index');
     $routes->get('chi-tiet/:any', 'Product::detail');
 });
-$routes->post('cart/add', 'Cart::add');
-
+$routes->group('gio-hang', function ($routes) {
+    $routes->get('/', 'Cart::index');
+    $routes->get('them', 'Cart::add');
+});
 /*
  * --------------------------------------------------------------------
  * Additional Routing

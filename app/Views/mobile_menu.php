@@ -26,6 +26,7 @@
                     </a>
                 </div>
             </div>
+            <?php ?>
             <div class="accordion-item ">
                 <div class="accordion-header accordion-header_accordion" id="hr_iphone">
 

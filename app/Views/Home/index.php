@@ -5,74 +5,49 @@
         <div class="container ">
             <section class="hpro__falshsale hbox-highlight home-boxproduct">
 
-                <p class="hboxproduct__title text-upp">Deal Shock mỗi ngày cùng Minh Tuấn Mobile</p>
+                <p class="hboxproduct__title text-upp">Deal Shock mỗi ngày</p>
 
                 <div class="owl-carousel owl-theme product__container owl_runjs_prosale " id="owl_prosaleoff">
-                    <div class="item proitem prosaleoff__item">
-                        <div class="probox  boxproid__3126 boxprobrand__apple boxprotype__productpricecolor pro__group86">
-                            <a href="https://minhtuanmobile.com/iphone-11-2019-64gb-ll-a-6-2-6284/" class="box">
-                                <div class="probox__img">
+                    <?php if (!empty($product_hot_deal)) : ?>
+                        <?php foreach ($product_hot_deal as $row) : ?>
+                            <div class="item proitem prosaleoff__item">
+                                <div class="probox  boxproid__3126 boxprobrand__apple boxprotype__productpricecolor pro__group86">
+                                    <a href="<?= base_url() . '/' . $row->slug ?>" class="box">
+                                        <div class="probox__img">
 
-                                    <figure class="mb-0 position-relative">
-                                        <img src="<?= base_url() ?>/uploads/products/210628084521-11-xanh-210617124643-210628084521_thumb.jpg" alt="iPhone 11 64GB - Chính hãng VN/A - MHDG3VN/A" class="img-full img-responsive" onerror="this.src='https://cdn.minhtuanmobile.com/assets/front/img/default-400_400.jpg'" loading="lazy">
-                                    </figure>
-                                    <span class="percent"><i class="fa fa-star"></i>Tiết kiệm 5,300,000đ</span><span class="percent_tag">Giảm 34%</span>
-                                    <div method="post" action="<?= base_url() ?>/gio-hang/them/" class="pro__addtocart product-add-cart">
-                                        <div class="overflow">
-                                            <span class="btn-action">
-                                                <button type="submit" class="action-addtocart btn-hover hover" data-val="iphone-11-2019-64gb-ll-a-6-2-6284">
-                                                    <span class="addtocart__text">
-                                                        <i class="fa fa-shopping-cart"></i>
-                                                        Mua Ngay </span>
-                                                    <svg class="addtocart__complete" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32">
-                                                        <path stroke-dasharray="19.79 19.79" stroke-dashoffset="19.79" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" d="M9,17l3.9,3.9c0.1,0.1,0.2,0.1,0.3,0L23,11" />
-                                                    </svg>
-                                                </button>
-                                            </span>
+                                            <figure class="mb-0 position-relative">
+                                                <img src="<?= cms_url() ?>/uploads/<?= $row->image ?>" alt="iPhone 11 64GB - Chính hãng VN/A - MHDG3VN/A" class="img-full img-responsive" onerror="this.src='<?= base_url() ?>/assets/front/img/default-400_400.jpg'" loading="lazy">
+                                            </figure>
+                                            <span class="percent"><i class="fa fa-star"></i>Tiết kiệm </span><span class="percent_tag">Giảm <?= $row->discount ?>%</span>
+                                            <div method="post" action="<?= base_url() ?>/gio-hang/them/" class="pro__addtocart product-add-cart">
+                                                <div class="overflow">
+                                                    <span class="btn-action">
+                                                        <button type="submit" class="action-addtocart btn-hover hover" data-val="iphone-11-2019-64gb-ll-a-6-2-6284">
+                                                            <span class="addtocart__text">
+                                                                <i class="fa fa-shopping-cart"></i>
+                                                                Mua Ngay
+                                                            </span>
+                                                            <svg class="addtocart__complete" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32">
+                                                                <path stroke-dasharray="19.79 19.79" stroke-dashoffset="19.79" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" d="M9,17l3.9,3.9c0.1,0.1,0.2,0.1,0.3,0L23,11" />
+                                                            </svg>
+                                                        </button>
+                                                    </span>
+                                                </div>
+                                                <input type="hidden" name="qty" value="1" />
+                                                <input type="hidden" name="checkin" value="iphone-11-2019-64gb-ll-a-6-2-6284" />
+                                            </div>
                                         </div>
-                                        <input type="hidden" name="qty" value="1" />
-                                        <input type="hidden" name="checkin" value="iphone-11-2019-64gb-ll-a-6-2-6284" />
-                                    </div>
-                                </div>
 
-                                <div class="probox__des  ">
-                                    <!-- <div class="proitem__countdown" data-countdown="565754" data-finish="&lt;span class=&quot;price&quot;&gt;15,990,000 vnđ&lt;/span&gt;" data-percent=""></div> -->
-                                    <h3 class="probox__title">iPhone 11 64GB - Chính hãng VN/A - MHDG3VN/A</h3>
-                                    <p class="probox__price"><b class="price">10,490,000 VNĐ</b><s>15,990,000 VNĐ</s></p>
-
+                                        <div class="probox__des  ">
+                                            <!-- <div class="proitem__countdown" data-countdown="565754" data-finish="&lt;span class=&quot;price&quot;&gt;15,990,000 vnđ&lt;/span&gt;" data-percent=""></div> -->
+                                            <h3 class="probox__title"><?= $row->name ?></h3>
+                                            <p class="probox__price"><b class="price"><?= number_format($row->discount_price) ?></b><s><?= number_format($row->price) ?> VNĐ</s></p>
+                                        </div>
+                                    </a>
                                 </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="hpro__saleoff hbox-highlight home-boxproduct">
-                <p class="hboxproduct__title">Khuyến mãi khủng</p>
-                <div class="owl-carousel owl-theme product__container owl_runjs_prosale " id="owl_prosaleoff">
-                    <div class="item proitem prosaleoff__item">
-                        <div class="probox  boxproid__6957 boxprobrand__apple boxprotype__product pro__group89">
-                            <a href="https://minhtuanmobile.com/macbook-pro-13-m1-late-2020-512gb-myd92-mydc2-new-seal/" class="box">
-                                <div class="probox__img">
-                                    <figure class="mb-0 position-relative">
-                                        <img src="<?= base_url() ?>/uploads/products/26333-210510111443-210510111443_thumb.jpg" alt="MacBook Pro 13" M1 2020 512GB - New seal Hàng Chính Hãng VN - (MYD92/MYDC2)" class="img-full img-responsive" onerror="this.src='https://cdn.minhtuanmobile.com/assets/front/img/default-400_400.jpg'" loading="lazy">
-                                    </figure>
-                                    <span class="percent"><i class="fa fa-star"></i>Tiết kiệm 10,000,000đ</span>
-                                    <span class="percent_tag">Giảm 26%</span>
-                                    <span class="probox__text_promotion">
-                                        <span class="probox__text_promotion__text">SỐ LƯỢNG CÓ HẠN<br />
-                                            TẶNG KÈM BALO TOMTOC (USA) CHÍNH HÃNG
-                                        </span>
-                                    </span>
-                                </div>
-                                <div class="probox__des  ">
-                                    <!-- <div class="proitem__countdown" data-countdown="565754" data-finish="&lt;span class=&quot;price&quot;&gt;39,990,000 vnđ&lt;/span&gt;" data-percent=""></div> -->
-                                    <h3 class="probox__title">MacBook Pro 13" M1 2020 512GB - New seal Hàng Chính Hãng VN - (MYD92/MYDC2)</h3>
-                                    <p class="probox__price"><b class="price">29,990,000 VNĐ</b><s>39,990,000 VNĐ</s></p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
+                            </div>
+                        <?php endforeach ?>
+                    <?php endif ?>
                 </div>
             </section>
 
@@ -87,48 +62,6 @@
 
             </section>
 
-            <script>
-                $(document).ready(function() {
-
-                    $('#owl_hbannertop').owlCarousel({
-                        autoplay: false,
-                        autoplayTimeout: 2900,
-                        margin: 0,
-                        items: 3,
-                        dots: false,
-                        loop: true,
-                        nav: true,
-                        thumbs: false,
-                        navText: ['<i class="far fa-caret-square-left"></i>', '<i class="far fa-caret-square-right"></i>'],
-                        responsive: {
-                            // breakpoint from 0 up
-                            0: {
-                                items: 1,
-                                dots: true,
-                                nav: false,
-                                autoplay: true,
-                                margin: 0,
-                            },
-                            360: {
-                                items: 1,
-                                dots: true,
-                                nav: false,
-                                autoplay: true,
-                                margin: 0,
-                            },
-                            768: {
-                                items: 3,
-                                dots: false,
-                                nav: false,
-                                mouseDrag: false,
-                                touchDrag: false,
-                                autoplay: false,
-                                margin: 20,
-                            },
-                        }
-                    });
-                });
-            </script>
 
             <section class="home-boxproduct hprobox__container mb-3 mb-lg-4  hprobox__itemhighlight countht_1">
 
@@ -171,9 +104,7 @@
                     </div>
 
                     <div class="col proitem">
-
-
-                        <div class="probox  boxproid__11817 boxprobrand__apple boxprotype__product pro__group86">
+                        <div class="probox boxproid__11817 boxprobrand__apple boxprotype__product pro__group86">
                             <a href="https://minhtuanmobile.com/iphone-13-pro-max-128-gb-chinh-hang-vn-a/" class="box">
                                 <div class="probox__img">
 
@@ -184,197 +115,102 @@
                                 </div>
 
                                 <div class="probox__des  ">
-                                    <!-- <div class="proitem__countdown" data-countdown="565754" data-finish="&lt;span class=&quot;price&quot;&gt;35,990,000 vnđ&lt;/span&gt;" data-percent=""></div> -->
                                     <h3 class="probox__title">iPhone 13 Pro Max 128G - Chính Hãng VN/A</h3>
                                     <p class="probox__price"><b class="price">26,490,000 VNĐ</b><s>35,990,000 VNĐ</s></p>
-
                                 </div>
                             </a>
                         </div>
                     </div>
                 </div>
             </section>
-
-            <section class="home-boxproduct hprobox__container mb-3 mb-lg-4 ">
-                <div class="row align-items-center hboxproduct__title">
-                    <h2 class="col-12 col-md-auto hboxproduct__title_title">
-                        <a href="https://minhtuanmobile.com/iphone-13-series">iPhone 13 Series</a>
-                    </h2>
-                    <ul class="col-12 col-md hboxproduct__title_nav">
-                        <li>
-                            <a href="https://minhtuanmobile.com/iphone-13-series" class="hover">
-                                XEM THÊM <input type="hidden" value="">
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="row row-cols-2 row-cols-sm-4 row-cols-lg-5 row-cols-xl-5 product__container transition">
-
-                    <div class="col proitem">
-
-                        <div class="probox  boxproid__11801 boxprobrand__apple boxprotype__product pro__group86">
-                            <a href="https://minhtuanmobile.com/iphone-13-128-gb-chinh-hang-vn-a/" class="box">
-                                <div class="probox__img">
-
-                                    <figure class="mb-0 position-relative">
-                                        <img src="<?= base_url() ?>/uploads/products/13-xanh-220510023036-220510143037_thumb.jpg" alt="iPhone 13 128GB - Chính Hãng VN/A" class="img-full img-responsive" onerror="this.src='https://cdn.minhtuanmobile.com/assets/front/img/default-400_400.jpg'" loading="lazy">
-                                    </figure>
-                                    <span class="percent"><i class="fa fa-star"></i>Tiết kiệm 6,500,000đ</span><span class="percent_tag">Giảm 27%</span>
-                                </div>
-
-                                <div class="probox__des  ">
-                                    <!-- <div class="proitem__countdown" data-countdown="565754" data-finish="&lt;span class=&quot;price&quot;&gt;24,990,000 vnđ&lt;/span&gt;" data-percent=""></div> -->
-                                    <h3 class="probox__title">iPhone 13 128GB - Chính Hãng VN/A</h3>
-                                    <p class="probox__price"><b class="price">18,490,000 VNĐ</b><s>24,990,000 VNĐ</s></p>
-
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="home-boxproduct hprobox__container mb-3 mb-lg-4 hprobox__hidenlast">
-                <div class="row align-items-center hboxproduct__title">
-                    <h2 class="col-12 col-md-auto hboxproduct__title_title">
-                        <a href="https://minhtuanmobile.com/iphone-12-series/">iPhone 12 Series</a>
-                    </h2>
-                    <ul class="col-12 col-md hboxproduct__title_nav">
-                        <li>
-                            <a href="https://minhtuanmobile.com/iphone-12/" class="hover">
-                                iPhone 12 <input type="hidden" value="">
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="https://minhtuanmobile.com/iphone-12-mini/" class="hover">
-                                iPhone 12 Mini <input type="hidden" value="">
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="https://minhtuanmobile.com/iphone-12-series" class="hover">
-                                XEM THÊM <input type="hidden" value="">
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="row row-cols-2 row-cols-sm-4 row-cols-lg-5 row-cols-xl-5 product__container transition">
-
-                    <div class="col proitem">
-                        <div class="probox  boxproid__6460 boxprobrand__apple boxprotype__product pro__group86">
-                            <a href="https://minhtuanmobile.com/iphone-12-64gb-chinh-hang/" class="box">
-                                <div class="probox__img">
-
-                                    <figure class="mb-0 position-relative">
-                                        <img src="<?= base_url() ?>/uploads/products/iphone-12-lineup-screen-wwen-220703011236-220703131237_thumb.jpg" alt="iPhone 12 64GB -  Chính hãng VN/A" class="img-full img-responsive" onerror="this.src='https://cdn.minhtuanmobile.com/assets/front/img/default-400_400.jpg'" loading="lazy">
-                                    </figure>
-                                    <span class="percent"><i class="fa fa-star"></i>Tiết kiệm 9,500,000đ</span><span class="percent_tag">Giảm 39%</span>
-                                </div>
-
-                                <div class="probox__des  ">
-                                    <h3 class="probox__title">iPhone 12 64GB - Chính hãng VN/A</h3>
-                                    <p class="probox__price"><b class="price">15,490,000 VNĐ</b><s>24,990,000 VNĐ</s></p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="home-boxproduct hprobox__container mb-3 mb-lg-4 ">
-
-                <div class="row align-items-center hboxproduct__title">
-                    <h2 class="col-12 col-md-auto hboxproduct__title_title">
-                        <a href="https://minhtuanmobile.com/macbook">Mac</a>
-                    </h2>
-                    <ul class="col-12 col-md hboxproduct__title_nav">
-                        <li>
-                            <a href="https://minhtuanmobile.com/macbook-pro/" class="hover">
-                                MacBook Air <input type="hidden" value="">
-                            </a>
-                        </li>
-
-
-
-                        <li>
-                            <a href="https://minhtuanmobile.com/mackbook-air/" class="hover">
-                                MacBook Pro <input type="hidden" value="">
-                            </a>
-                        </li>
-
-
-
-                        <li>
-                            <a href="https://minhtuanmobile.com/imac/" class="hover">
-                                iMac <input type="hidden" value="">
-                            </a>
-                        </li>
-
-
-
-                        <li>
-                            <a href="https://minhtuanmobile.com/mac-mini/" class="hover">
-                                Mac mini <input type="hidden" value="">
-                            </a>
-                        </li>
-
-
-
-                        <li>
-                            <a href="https://minhtuanmobile.com/mac" class="hover">
-                                XEM THÊM <input type="hidden" value="">
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="row row-cols-2 row-cols-sm-4 row-cols-lg-5 row-cols-xl-5 product__container transition">
-                    <div class="col proitem">
-
-
-                        <div class="probox  boxproid__14283 boxprobrand__apple boxprotype__product pro__group89 pro__group839">
-                            <a href="https://minhtuanmobile.com/macbook-air-m2-13-6-inch-2022-chip-m2-8cpu-8gpu-256gb-ram-8gb/" class="box">
-                                <div class="probox__img">
-
-                                    <figure class="mb-0 position-relative">
-                                        <img src="<?= base_url() ?>/uploads/products/m2-220819011604-220819131604_thumb.jpg" alt="MacBook Air M2 13" 2022 8CPU 8GPU 256GB| RAM 8GB Chính hãng VN" class="img-full img-responsive" onerror="this.src='https://cdn.minhtuanmobile.com/assets/front/img/default-400_400.jpg'" loading="lazy">
-                                    </figure>
-                                    <span class="percent"><i class="fa fa-star"></i>Tiết kiệm 2,700,000đ</span><span class="percent_tag">Giảm 9%</span>
-                                </div>
-
-                                <div class="probox__des  ">
-                                    <!-- <div class="proitem__countdown" data-countdown="565754" data-finish="&lt;span class=&quot;price&quot;&gt;32,490,000 vnđ&lt;/span&gt;" data-percent=""></div> -->
-                                    <h3 class="probox__title">MacBook Air M2 13" 2022 8CPU 8GPU 256GB| RAM 8GB Chính hãng VN</h3>
-                                    <p class="probox__price"><small>Đã có hàng: </small><b class="price">29,590,000 VNĐ</b></p>
-
-                                </div>
-                            </a>
-
-
+            <?php if (!empty($product_line)) : ?>
+                <?php foreach ($product_line as $row) : ?>
+                    <section class="home-boxproduct hprobox__container mb-3 mb-lg-4 hprobox__hidenlast">
+                        <div class="row align-items-center hboxproduct__title">
+                            <h2 class="col-12 col-md-auto hboxproduct__title_title">
+                                <a href="https://minhtuanmobile.com/iphone-12-series/"><?= $row->name ?></a>
+                            </h2>
+                            <!-- <ul class="col-12 col-md hboxproduct__title_nav">
+                                <li>
+                                    <a href="https://minhtuanmobile.com/iphone-12/" class="hover">
+                                        iPhone 12 <input type="hidden" value="">
+                                    </a>
+                                </li>
+                            </ul> -->
                         </div>
 
+                        <div class="row row-cols-2 row-cols-sm-4 row-cols-lg-5 row-cols-xl-5 product__container transition">
+                            <?php foreach ($row->items_info as $item) : ?>
+                                <div class="col proitem">
+                                    <div class="probox  boxproid__6460 boxprobrand__apple boxprotype__product pro__group86">
+                                        <a href="<?= base_url() . '/' . $item->slug ?>" class="box">
+                                            <div class="probox__img">
 
-                    </div>
-                </div>
-            </section>
+                                                <figure class="mb-0 position-relative">
+                                                    <img src="<?= cms_url() ?>/uploads/<?= $item->image ?>" alt="iPhone 12 64GB -  Chính hãng VN/A" class="img-full img-responsive" onerror="this.src='<?= base_url() ?>/assets/front/img/default-400_400.jpg'" loading="lazy">
+                                                </figure>
+                                                <span class="percent"><i class="fa fa-star"></i>Tiết kiệm <?= number_format($item->discount_price) ?>đ</span><span class="percent_tag">Giảm <?= $item->discount ?>%</span>
+                                            </div>
 
-            <section class="home-boxproduct hblog__container">
-                <p class="hboxproduct__title bg-white">Danh mục phụ kiện</p>
-                <div class="row row-col-xs-3 row-cols-md-6 row-cols-lg-10 home-bannerctl">
-                    <figure class="col-4 col-sm-2 homebanner__item">
-                        <a href="https://minhtuanmobile.com/phu-kien-apple" target="_self" class="homebanner__box ">
-                            <img src="<?= base_url() ?>/uploads/slide/artboard-1-220709191310.png" alt="Phụ kiện Apple" class="img-responsive img-full " loading="lazy" />
-                            <figcaption class="hbannerctl__caption">Phụ kiện Apple</figcaption>
-                        </a>
-                    </figure>
-                </div>
-            </section>
+                                            <div class="probox__des  ">
+                                                <h3 class="probox__title"><?= $item->name ?></h3>
+                                                <p class="probox__price"><b class="price"><?= number_format($item->discount_price) ?> VNĐ</b><s><?= number_format($item->price) ?> VNĐ</s></p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            <?php endforeach ?>
+                        </div>
+                    </section>
+                <?php endforeach ?>
+            <?php endif ?>
         </div>
 
     </div>
+
+    <script>
+        $(document).ready(function() {
+
+            $('#owl_hbannertop').owlCarousel({
+                autoplay: false,
+                autoplayTimeout: 2900,
+                margin: 0,
+                items: 3,
+                dots: false,
+                loop: true,
+                nav: true,
+                thumbs: false,
+                navText: ['<i class="far fa-caret-square-left"></i>', '<i class="far fa-caret-square-right"></i>'],
+                responsive: {
+                    // breakpoint from 0 up
+                    0: {
+                        items: 1,
+                        dots: true,
+                        nav: false,
+                        autoplay: true,
+                        margin: 0,
+                    },
+                    360: {
+                        items: 1,
+                        dots: true,
+                        nav: false,
+                        autoplay: true,
+                        margin: 0,
+                    },
+                    768: {
+                        items: 3,
+                        dots: false,
+                        nav: false,
+                        mouseDrag: false,
+                        touchDrag: false,
+                        autoplay: false,
+                        margin: 20,
+                    },
+                }
+            });
+        });
+    </script>
+
 
     <script>
         $(document).ready(function() {

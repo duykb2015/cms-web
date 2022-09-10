@@ -3,13 +3,12 @@
 namespace App\Models;
 
 use CodeIgniter\HTTP\Response;
-use CodeIgniter\HTTP\ResponseInterface;
 use CodeIgniter\Model;
 
-class MenuModel extends Model
+class ProductModel extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'menu';
+    protected $table            = 'products';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $insertID         = 0;
@@ -42,14 +41,14 @@ class MenuModel extends Model
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
 
-    /**
+     /**
      * 
-     * Get all menu from api
+     * Get all product from api
      * 
      * @param string $url api url
      * @return object|array
      */
-    function get_menu($url)
+    function get_product($url)
     {
         $client = \Config\Services::curlrequest();
         $response = $client->request('GET', $url);

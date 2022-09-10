@@ -38,9 +38,10 @@
             <div class="col-auto header__action__container">
                 <ul class="row header__action">
                     <li class="col-auto header__action__item ps-4 px-4">
-                        <a href="https://minhtuanmobile.com/cart/" class="header__action__icon_order">
+                        <a href="<?= base_url() ?>/gio-hang/" class="header__action__icon_order">
                             <b>Giỏ hàng</b>
-                            <span class="cartitems_total"><?= 0 ? 'của bạn' : '1 sản phẩm' ?></span>
+                            <!-- isset($total_cart_item) && !empty($total_cart_item) && $total_cart_item > -->
+                            <span class="cartitems_total"><?= !empty($total_cart_items) ? $total_cart_items : 0  ?> sản phẩm</span>
                         </a>
                     </li>
                 </ul>
@@ -54,38 +55,53 @@
         <div class="container">
 
             <ul class="navigation">
-                <li class="nav-logo ">
-                    <a href="https://minhtuanmobile.com/">
-                        <span>
-                            <img src="https://cdn.minhtuanmobile.com/assets/front/img/logo-stick.png" alt="Logo" class="img-responsive" loading="lazy">
-                        </span>
-                    </a>
-                </li>
-                <li class="nav-icon ">
-                    <a href="https://minhtuanmobile.com/iphone/" target="_self">
-                        <span>
-                            <!-- <img src="https://cdn.minhtuanmobile.com/uploads/items/iphone-210331112745.png" loading="lazy" alt="iPhone"> -->
-                            Điện thoại
-                        </span>
-                    </a>
-                    <div class="header__navsub ">
-                        <ul class="header__navsub__container">
-                            <li>
-                                <a href="https://minhtuanmobile.com/iphone-13-series" class="header__navsub__title">
-                                    iPhone 13 Series </a>
-                                <div class="header__navsubctl ">
-                                    <ul class="header__navsub__container ">
+                <?php foreach ($menu as $row) : ?>
+                    <li class="nav-icon ">
+                        <a href="<?= base_url() . '/' . $row->slug ?>" target="_self">
+                            <span>
+                                <!-- <img src="https://cdn.minhtuanmobile.com/uploads/items/iphone-210331112745.png" loading="lazy" alt="iPhone"> -->
+                                <?= $row->name ?>
+                            </span>
+                        </a>
+                        <div class="header__navsub ">
+                            <?php if ($row->sub_menu) : ?>
+                                <ul class="header__navsub__container">
+                                    <?php foreach ($row->sub_menu as $sub_menu) : ?>
                                         <li>
-                                            <a href="https://minhtuanmobile.com/iphone-13-pro-max" class="header__navsub__title" target="_self">
-                                                iPhone 13 Pro Max
+                                            <a href="<?= base_url() . '/' . $sub_menu->slug ?>" class="header__navsub__title">
+                                                <?= $sub_menu->name ?>
+                                            </a>
+                                            <?php if ($row->category) : ?>
+                                                <div class="header__navsubctl ">
+                                                    <ul class="header__navsub__container ">
+                                                        <?php foreach ($sub_menu->category as $category) : ?>
+                                                            <li>
+                                                                <a href="<?= base_url() . '/' . $category->slug ?>" class="header__navsub__title" target="_self">
+                                                                    <?= $category->name ?>
+                                                                </a>
+                                                            </li>
+                                                        <?php endforeach ?>
+                                                    </ul>
+                                                </div>
+                                            <?php endif ?>
+                                        </li>
+                                    <?php endforeach ?>
+                                </ul>
+                            <?php endif ?>
+                            <?php if ($row->category) : ?>
+                                <ul class="header__navsub__container">
+                                    <?php foreach ($row->category as $category) : ?>
+                                        <li>
+                                            <a href="<?= base_url() . '/' . $category->slug ?>" class="header__navsub__title">
+                                                <?= $category->name ?>
                                             </a>
                                         </li>
-                                    </ul>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
+                                    <?php endforeach ?>
+                                </ul>
+                            <?php endif ?>
+                        </div>
+                    </li>
+                <?php endforeach ?>
             </ul>
         </div>
     </navigation>
