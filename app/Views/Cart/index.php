@@ -8,42 +8,18 @@
         <div class="container">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item">
-                    <a href="https://minhtuanmobile.com/">Trang chủ</a>
+                    <a href="<?= base_url() ?>">Trang chủ</a>
                 </li>
 
                 <li class="breadcrumb-item">
 
-                    <a href="https://minhtuanmobile.com/cart/" title="Đơn hàng của bạn" rel="v:url" property="v:title">
-                        Đơn hàng của bạn </a>
+                    <a href="<?= base_url('gio-hang') ?>" title="Đơn hàng của bạn" rel="v:url" property="v:title">
+                        Đơn hàng của bạn
+                    </a>
 
 
                 </li>
             </ol>
-
-
-            <script type="application/ld+json">
-                {
-                    "@context": "http://schema.org",
-                    "@type": "BreadcrumbList",
-                    "itemListElement": [{
-                            "@type": "ListItem",
-                            "position": 1,
-                            "item": {
-                                "@id": "https://minhtuanmobile.com/",
-                                "name": "minhtuanmobile.com"
-                            }
-                        },
-                        {
-                            "@type": "ListItem",
-                            "position": 2,
-                            "item": {
-                                "@id": "https://minhtuanmobile.com/cart/",
-                                "name": "Đơn hàng của bạn"
-                            }
-                        }
-                    ]
-                }
-            </script>
 
         </div>
 

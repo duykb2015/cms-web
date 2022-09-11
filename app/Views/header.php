@@ -55,53 +55,55 @@
         <div class="container">
 
             <ul class="navigation">
-                <?php foreach ($menu as $row) : ?>
-                    <li class="nav-icon ">
-                        <a href="<?= base_url() . '/' . $row->slug ?>" target="_self">
-                            <span>
-                                <!-- <img src="https://cdn.minhtuanmobile.com/uploads/items/iphone-210331112745.png" loading="lazy" alt="iPhone"> -->
-                                <?= $row->name ?>
-                            </span>
-                        </a>
-                        <div class="header__navsub ">
-                            <?php if ($row->sub_menu) : ?>
-                                <ul class="header__navsub__container">
-                                    <?php foreach ($row->sub_menu as $sub_menu) : ?>
-                                        <li>
-                                            <a href="<?= base_url() . '/' . $sub_menu->slug ?>" class="header__navsub__title">
-                                                <?= $sub_menu->name ?>
-                                            </a>
-                                            <?php if ($row->category) : ?>
-                                                <div class="header__navsubctl ">
-                                                    <ul class="header__navsub__container ">
-                                                        <?php foreach ($sub_menu->category as $category) : ?>
-                                                            <li>
-                                                                <a href="<?= base_url() . '/' . $category->slug ?>" class="header__navsub__title" target="_self">
-                                                                    <?= $category->name ?>
-                                                                </a>
-                                                            </li>
-                                                        <?php endforeach ?>
-                                                    </ul>
-                                                </div>
-                                            <?php endif ?>
-                                        </li>
-                                    <?php endforeach ?>
-                                </ul>
-                            <?php endif ?>
-                            <?php if ($row->category) : ?>
-                                <ul class="header__navsub__container">
-                                    <?php foreach ($row->category as $category) : ?>
-                                        <li>
-                                            <a href="<?= base_url() . '/' . $category->slug ?>" class="header__navsub__title">
-                                                <?= $category->name ?>
-                                            </a>
-                                        </li>
-                                    <?php endforeach ?>
-                                </ul>
-                            <?php endif ?>
-                        </div>
-                    </li>
-                <?php endforeach ?>
+                <?php if ($menu) : ?>
+                    <?php foreach ($menu as $row) : ?>
+                        <li class="nav-icon ">
+                            <a href="<?= base_url() . '/' . $row->slug ?>" target="_self">
+                                <span>
+                                    <!-- <img src="https://cdn.minhtuanmobile.com/uploads/items/iphone-210331112745.png" loading="lazy" alt="iPhone"> -->
+                                    <?= $row->name ?>
+                                </span>
+                            </a>
+                            <div class="header__navsub ">
+                                <?php if ($row->sub_menu) : ?>
+                                    <ul class="header__navsub__container">
+                                        <?php foreach ($row->sub_menu as $sub_menu) : ?>
+                                            <li>
+                                                <a href="<?= base_url() . '/' . $sub_menu->slug ?>" class="header__navsub__title">
+                                                    <?= $sub_menu->name ?>
+                                                </a>
+                                                <?php if ($row->category) : ?>
+                                                    <div class="header__navsubctl ">
+                                                        <ul class="header__navsub__container ">
+                                                            <?php foreach ($sub_menu->category as $category) : ?>
+                                                                <li>
+                                                                    <a href="<?= base_url() . '/' . $category->slug ?>" class="header__navsub__title" target="_self">
+                                                                        <?= $category->name ?>
+                                                                    </a>
+                                                                </li>
+                                                            <?php endforeach ?>
+                                                        </ul>
+                                                    </div>
+                                                <?php endif ?>
+                                            </li>
+                                        <?php endforeach ?>
+                                    </ul>
+                                <?php endif ?>
+                                <?php if ($row->category) : ?>
+                                    <ul class="header__navsub__container">
+                                        <?php foreach ($row->category as $category) : ?>
+                                            <li>
+                                                <a href="<?= base_url() . '/' . $category->slug ?>" class="header__navsub__title">
+                                                    <?= $category->name ?>
+                                                </a>
+                                            </li>
+                                        <?php endforeach ?>
+                                    </ul>
+                                <?php endif ?>
+                            </div>
+                        </li>
+                    <?php endforeach ?>
+                <?php endif ?>
             </ul>
         </div>
     </navigation>
