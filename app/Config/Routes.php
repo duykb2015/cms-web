@@ -37,13 +37,24 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 $routes->group('san-pham', function ($routes) {
-    $routes->get('/', 'Product ::index');
+    $routes->get('', 'Product ::index');
     $routes->get('chi-tiet/:any', 'Product::detail');
 });
 $routes->group('gio-hang', function ($routes) {
-    $routes->get('/', 'Cart::index');
-    $routes->get('them', 'Cart::add');
+    $routes->get('', 'Cart::index');
+    $routes->post('them', 'Cart::add');
+    $routes->post('sua', 'Cart::update');
+    $routes->post('xoa', 'Cart::remove');
 });
+$routes->group('dang-nhap', function ($routes) {
+    $routes->get('', 'Login::login');
+    $routes->post('', 'Login::auth');
+});
+$routes->group('dang-ky', function ($routes) {
+    $routes->get('', 'Login::register');
+    $routes->post('', 'Auth::add');
+});
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

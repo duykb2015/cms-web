@@ -1,7 +1,6 @@
 <form method="post" class="hpro__bestseller home-boxproduct cart__container fcart__container">
 
     <h1 class="hboxproduct__title color-hover">Đơn hàng của bạn</h1>
-
     <div class="fcartbox p-0">
 
         <div class="clearfix" id="cart_content">

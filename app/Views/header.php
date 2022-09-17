@@ -38,24 +38,29 @@
             <div class="col-auto header__action__container">
                 <ul class="row header__action">
                     <li class="col-auto header__action__item ps-4 px-4">
-                        <a href="<?= base_url() ?>/gio-hang/" class="header__action__icon_order">
+                        <a href="<?= base_url('gio-hang') ?>" class="header__action__icon_order">
                             <b>Giỏ hàng</b>
-                            <!-- isset($total_cart_item) && !empty($total_cart_item) && $total_cart_item > -->
                             <span class="cartitems_total"><?= !empty($total_cart_items) ? $total_cart_items : 0  ?> sản phẩm</span>
                         </a>
                     </li>
+                    <?php if (!url_is('dang-nhap') && !url_is('dang-ky')) : ?>
+                        <li class="col-auto header__action__item ps-4 px-4">
+                            <a href="<?= base_url('dang-nhap') ?>" class="header__action__icon_order">
+                                <b>Đăng nhập</b>
+                            </a>
+                        </li>
+                    <?php endif ?>
+
                 </ul>
             </div>
         </div>
-
-
     </div>
 
     <navigation class="header__nav__container">
         <div class="container">
 
             <ul class="navigation">
-                <?php if ($menu) : ?>
+                <?php if (isset($menu)) : ?>
                     <?php foreach ($menu as $row) : ?>
                         <li class="nav-icon ">
                             <a href="<?= base_url() . '/' . $row->slug ?>" target="_self">

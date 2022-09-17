@@ -110,8 +110,8 @@ function action_autoscroll(_box) {
 function add_cartitem(data_post, _redirect) {
 
   if (data_post) {
-    $.post(site_url + '/cart/add', data_post, function (_data) {
-      console.log(_data) 
+    $.post(site_url + '/gio-hang/them', data_post, function (_data) {
+      console.log(_data)
       return
       if (_redirect !== false) {
         setTimeout(function () { window.location.href = _redirect; }, 320);//1s
@@ -124,6 +124,7 @@ function add_cartitem(data_post, _redirect) {
 function update_cart_action($this, $is_cod) {
   if ($this) {
     var _val = $this.val();
+
     var _val = is_number(_val) ? _val : 1;
     var _checkin = $this.data('checkin');
     var _box_price = $('#cart_content .cartitem .price[data-checkin=' + _checkin + ']')
@@ -514,7 +515,6 @@ $(document).ready(function (e) {
     var $this = $(this);
     var _checkin_element = $(this).data('checkin');
     var text_val = $(this).val();
-    //console.log( text_val );
     $(this).delay(250).queue(function () {
 
       if ($('body .overlay').length > 0) {
@@ -526,8 +526,8 @@ $(document).ready(function (e) {
       var data_post = {};
       data_post['value'] = _checkin_element;
       data_post['qty'] = text_val;
-      $.post(site_url + 'cart/update-item', data_post, function () {
-        //window.location.reload();
+
+      $.post(site_url + '/gio-hang/sua', data_post, function () {
         update_cart_action($this);
       });
       $(this).dequeue();
@@ -540,10 +540,11 @@ $(document).ready(function (e) {
     var _checkin_element = $(this).attr('name');
     var text_val = $(this).val();
     var _qty = $('[name=qty_' + _checkin_element + ']').val();
-    //console.log( _checkin_element, text_val, _qty );
+
     /**/
     if (text_val) {
       $(this).delay(250).queue(function () {
+
 
         if ($('body .overlay').length > 0) {
           $('body .overlay').fadeIn('slow');
@@ -556,21 +557,19 @@ $(document).ready(function (e) {
         data_post['procode'] = text_val;
         data_post['qty'] = _qty;
 
-        $.post(site_url + 'cart/update-item', data_post, function (_data) {
+        $.post(site_url + '/gio-hang/sua', data_post, function (_data) {
           //window.location.reload();
-          var resdata = $.parseJSON(_data);
+
+          var resdata = _data;//$.parseJSON(_data);
           var cartitem = $('.cartitem_' + _checkin_element);
           //-------------
           cartitem.find('.des-price span.price').html(resdata.percent_text);
           cartitem.find('.price-amount').data('price', resdata.active);
           cartitem.find('.price-amount').html(format_number(resdata.active));
-          //console.log( resdata );
           update_cart_action($this);
         });
         $(this).dequeue();
       });
-    } else {
-      alert('Vui lòng chọn màu sắc.');
     }
 
   });
@@ -579,10 +578,9 @@ $(document).ready(function (e) {
     var _text_confirm = $(this).data('confirm');
     if (window.confirm(_text_confirm) === true) {
       var checkin = $(this).data('checkin');
-      $.post(site_url + 'cart/remove', { 'item': checkin }, function () {
+      $.post(site_url + '/gio-hang/xoa', { 'item': checkin }, function () {
         window.location.reload();
       });
-      //return true;
     } else {
       return false;
     }
