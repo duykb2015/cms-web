@@ -48,11 +48,11 @@ $routes->group('gio-hang', function ($routes) {
 });
 $routes->group('dang-nhap', function ($routes) {
     $routes->get('', 'Login::login');
-    $routes->post('', 'Login::auth');
+    $routes->post('', 'Login::auth_login');
 });
 $routes->group('dang-ky', function ($routes) {
     $routes->get('', 'Login::register');
-    $routes->post('', 'Auth::add');
+    $routes->post('', 'Auth::auth_register');
 });
 
 /*

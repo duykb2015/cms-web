@@ -22,11 +22,23 @@
             <div class="fcartbox row">
                 <div class="col-12 col-lg-6">
                     <div class="mb-3">
+                        <?php $auth_err = session()->getFlashdata('auth_error') ?>
+                        <?php if (isset($auth_err)) :  ?>
+                            <div class="alert-danger rounded mb-1 p-1"><?= $auth_err ?></div>
+                        <?php endif ?>
+
+                        <?php $err = session()->getFlashdata('error'); ?>
                         <label class="form-label b500">Email<b class="text-danger ml-1">*</b></label>
+                        <?php if (isset($err['email'])) :  ?>
+                            <div class="alert-danger rounded mb-1 p-1"><?= $err['email'] ?></div>
+                        <?php endif ?>
                         <input type="text" class="form-control" name="email" autocomplete="off" required value="">
                     </div>
                     <div class="mb-3">
                         <label class="form-label b500">Mật khẩu<b class="text-danger ml-1">*</b></label>
+                        <?php if (isset($err['password'])) :  ?>
+                            <div class="alert-danger rounded mb-1 p-1"><?= $err['password'] ?></div>
+                        <?php endif ?>
                         <input type="password" class="form-control hide_arrow" name="password" autocomplete="off" required value="">
                     </div>
                     <p>Chưa có tài khoản? <a href="<?= base_url('dang-ky') ?>">Đăng kí ngay!</a></p>
