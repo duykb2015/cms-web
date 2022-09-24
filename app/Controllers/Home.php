@@ -10,7 +10,7 @@ class Home extends BaseController
     //Api url
     private string $url;
 
-    public function indexs()
+    public function index()
     {
         $menu_m = new MenuModel();
         $this->url = 'http://localhost:1993/v1/menu';
@@ -34,9 +34,5 @@ class Home extends BaseController
             unset($product);
         }
         return view('home/index', $data, ['saveData' => true]);
-    }
-    public function index()
-    {
-        return view('home/index');
     }
 }

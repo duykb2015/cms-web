@@ -22,24 +22,36 @@
             <div class="fcartbox row">
                 <div class="col-12 col-lg-6">
                     <div class="mb-3">
+                        <?php if (isset($auth_error)) :  ?>
+                            <div class="alert-danger rounded mb-1 p-1"><?= $auth_error ?></div>
+                        <?php endif ?>
+                        <?php if (isset($success)) :  ?>
+                            <div class="alert-success rounded mb-1 p-1"><?= $success ?></div>
+                        <?php endif ?>
                         <label class="form-label b500">Email<b class="text-danger ml-1">*</b></label>
-                        <input type="text" class="form-control" name="email" autocomplete="off" required value="">
+                        <input type="text" class="form-control" name="email" autocomplete="off" required value="<?= set_value('email') ?>">
+                        <?php if (isset($error['email'])) :  ?>
+                            <div class="alert-danger rounded mb-1 p-1"><?= $error['email'] ?></div>
+                        <?php endif ?>
                     </div>
                     <div class="mb-3">
                         <label class="form-label b500">Mật khẩu<b class="text-danger ml-1">*</b></label>
                         <input type="password" class="form-control hide_arrow" name="password" autocomplete="off" required value="">
+                        <?php if (isset($error['password'])) :  ?>
+                            <div class="alert-danger rounded mb-1 p-1"><?= $error['password'] ?></div>
+                        <?php endif ?>
                     </div>
                     <div class="mb-3">
                         <label class="form-label b500">Họ và Tên</label>
-                        <input type="text" class="form-control hide_arrow" name="name" autocomplete="off" value="">
+                        <input type="text" class="form-control hide_arrow" name="username" autocomplete="off" value="<?= set_value('username') ?>">
                     </div>
                     <div class="mb-3">
                         <label class="form-label b500">Địa chỉ</label>
-                        <input type="text" class="form-control hide_arrow" name="address" autocomplete="off" value="">
+                        <input type="text" class="form-control hide_arrow" name="address" autocomplete="off" value="<?= set_value('address') ?>">
                     </div>
                     <div class="mb-3">
                         <label class="form-label b500">Số điện thoại</label>
-                        <input type="tel" class="form-control hide_arrow" name="tel" autocomplete="off" value="" maxlength="10">
+                        <input type="tel" class="form-control hide_arrow" name="phone" autocomplete="off" value="<?= set_value('phone') ?>" maxlength="10">
                     </div>
                     <p>Đã có tài khoản? <a href="<?= base_url('dang-nhap') ?>">Đăng nhập ngay!</a></p>
                 </div>

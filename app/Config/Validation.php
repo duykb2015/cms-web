@@ -41,4 +41,20 @@ class Validation extends BaseConfig
     //--------------------------------------------------------------------
     // Rules
     //--------------------------------------------------------------------
+
+    public $login = [
+        'email'        => 'required|valid_email',
+        'password'     => 'required|min_length[4]',
+    ];
+
+    public $login_errors = [
+        'email' => [
+            'required' => 'Email không được để trống!',
+            'valid_email' => 'Email không hợp lệ!',
+        ],
+        'password' => [
+            'required' => 'Mật khẩu không được để trống!',
+            'min_length' => 'Mật khẩu phải có ít nhất 4 kí tự!',
+        ],
+    ];
 }

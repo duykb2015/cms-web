@@ -37,16 +37,24 @@
             </div>
             <div class="col-auto header__action__container">
                 <ul class="row header__action">
-                    <li class="col-auto header__action__item ps-4 px-4">
-                        <a href="<?= base_url('gio-hang') ?>" class="header__action__icon_order">
-                            <b>Giỏ hàng</b>
-                            <span class="cartitems_total"><?= !empty($total_cart_items) ? $total_cart_items : 0  ?> sản phẩm</span>
-                        </a>
-                    </li>
-                    <?php if (!url_is('dang-nhap') && !url_is('dang-ky')) : ?>
+                    <?php if (!url_is('dang-nhap') && !url_is('dang-ky')) :  ?>
+                        <li class="col-auto header__action__item ps-4 px-4">
+                            <a href="<?= base_url('gio-hang') ?>" class="header__action__icon_order">
+                                <b>Giỏ hàng</b>
+                                <span class="cartitems_total"><?= !empty($total_cart_items) ? $total_cart_items : 0  ?> sản phẩm</span>
+                            </a>
+                        </li>
+                    <?php endif ?>
+                    <?php if (!url_is('dang-nhap') && !url_is('dang-ky') && !$_COOKIE['token']) : ?>
                         <li class="col-auto header__action__item ps-4 px-4">
                             <a href="<?= base_url('dang-nhap') ?>" class="header__action__icon_order">
                                 <b>Đăng nhập</b>
+                            </a>
+                        </li>
+                    <?php else : ?>
+                        <li class="col-auto header__action__item ps-4 px-4">
+                            <a href="<?= base_url('dang-xuat') ?>" class="header__action__icon_order">
+                                <b></b>
                             </a>
                         </li>
                     <?php endif ?>

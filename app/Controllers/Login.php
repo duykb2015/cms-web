@@ -7,7 +7,8 @@ use CodeIgniter\Cookie\Cookie;
 
 class Login extends BaseController
 {
-    private string $url;
+    private $authLoginV1    = 'http://localhost:1993/v1/user/auth/login';
+    private $authRegisterV1 = 'http://localhost:1993/v1/user/auth/register';
 
     public function login()
     {
@@ -18,53 +19,94 @@ class Login extends BaseController
     {
         $client = \Config\Services::curlrequest();
         $client->setHeader('Content-Type', 'application/json');
-        $this->url = 'http://localhost:1993/v1/user/auth/login';
 
-        $email = $this->request->getPost('email');
+        $email    = $this->request->getPost('email');
         $password = $this->request->getPost('password');
+
         $inputs = [
             'email' => $email, //'iha6r45f@duck.com',
-            'password' => md5($password)
+            'password' => $password
         ];
-        $validation = service('validation');
-        $validation->setRules(
-            [
-                'email' => 'required',
-                'password' => 'required|min_length[4]'
-            ],
-            [
-                'email' => [
-                    'required' => 'Email không được để trống!',
-                    'valid_email' => 'Email không hợp lệ!',
-                ],
-                'password' => [
-                    'required' => 'Mật khẩu không được để trống!',
-                    'min_length' => 'Mật khẩu phải có ít nhất 3 kí tự!',
-                ],
-            ]
-        );
+        //validation
+        $validation = \Config\Services::validation();
+        $validation->setRuleGroup('login');
 
         //if something wrong, redirect to login page and show error message
         if (!$validation->run($inputs)) {
-            $error_msg = $validation->getErrors();
-            session()->setFlashdata('error', $error_msg);
-            return redirect()->to(site_url('dang-nhap'));
+            $data['error'] = $validation->getErrors();
+            return view('login/login', $data);
         }
 
-        $body = json_encode($inputs);
-        $reps = $client->setBody("$body")->request('POST', $this->url);
+        //Need to encrypt password before sending
+
+        $datas = [
+            'email' => $email,
+            'password' => md5($password)
+        ];
+
+        $body   = json_encode($datas);
+        $reps   = $client->setBody("$body")->request('POST', $this->authLoginV1);
+        //Not check error yet
         $result = json_decode($reps->getBody())->result;
-        if ($result->code == HTTP_STATUS_UNAUTHORIZED) {
-            session()->setFlashdata('auth_error', $result->msg);
-            return redirect()->to(site_url('dang-nhap'));
-        }
-        set_cookie('token', $result->token, time() + 15 * 60);
 
-        pre(get_cookie('token'));
+        if ($result->code != HTTP_STATUS_OK) {
+            $data['auth_error'] = $result->msg;
+            return view('login/login', $data);
+        }
+
+        //set cookie expired after 15 mins
+        set_cookie('token', $result->token, time() + 15 * 60);
+        return redirect()->to('/');
     }
 
     public function register()
     {
         return view('login/register');
+    }
+
+    public function auth_register()
+    {
+        $client = \Config\Services::curlrequest();
+        $client->setHeader('Content-Type', 'application/json');
+
+        $email    = $this->request->getPost('email');
+        $password = $this->request->getPost('password');
+        $username = $this->request->getPost('username');
+        $address  = $this->request->getPost('address');
+        $phone    = $this->request->getPost('phone');
+
+        $inputs = [
+            'email' => $email, //'iha6r45f@duck.com',
+            'password' => $password
+        ];
+        //validation
+        $validation = \Config\Services::validation();
+        $validation->setRuleGroup('login');
+
+        //if something wrong, redirect to login page and show error message
+        if (!$validation->run($inputs)) {
+            $data['error'] = $validation->getErrors();
+            return view('login/login', $data);
+        }
+
+        //Need to encrypt password before sending
+        $datas = [
+            'email'    => $email,
+            'password' => md5($password),
+            'username' => $username,
+            'address'  => $address,
+            'phone'    => $phone
+        ];
+        $body = json_encode($datas);
+        $reps = $client->setBody("$body")->request('POST', $this->authRegisterV1);
+        $result = json_decode($reps->getBody())->result;
+
+        if ($result->code != HTTP_STATUS_OK) {
+            $data['auth_error'] = $result->msg;
+            return view('login/register', $data);
+        }
+
+        $data['success'] = 'Đăng ký thành công, giờ bạn có thể đăng nhập';
+        return view('login/register', $data);
     }
 }

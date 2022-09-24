@@ -5,6 +5,7 @@ namespace App\Filters;
 use CodeIgniter\Filters\FilterInterface;
 use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
+use Config\Cookie;
 
 class AuthToken implements FilterInterface
 {
@@ -25,7 +26,11 @@ class AuthToken implements FilterInterface
      */
     public function before(RequestInterface $request, $arguments = null)
     {
-        //
+        helper('cookie');
+        
+        if (!get_cookie('token')) {
+            return redirect()->to('dang-nhap');
+        }
     }
 
     /**

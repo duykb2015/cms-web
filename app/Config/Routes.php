@@ -40,21 +40,22 @@ $routes->group('san-pham', function ($routes) {
     $routes->get('', 'Product ::index');
     $routes->get('chi-tiet/:any', 'Product::detail');
 });
-$routes->group('gio-hang', function ($routes) {
-    $routes->get('', 'Cart::index');
-    $routes->post('them', 'Cart::add');
-    $routes->post('sua', 'Cart::update');
-    $routes->post('xoa', 'Cart::remove');
-});
+
 $routes->group('dang-nhap', function ($routes) {
     $routes->get('', 'Login::login');
     $routes->post('', 'Login::auth_login');
 });
 $routes->group('dang-ky', function ($routes) {
     $routes->get('', 'Login::register');
-    $routes->post('', 'Auth::auth_register');
+    $routes->post('', 'Login::auth_register');
 });
 
+$routes->group('gio-hang', ['filter' => 'authlogin'], function ($routes) {
+    $routes->get('', 'Cart::index');
+    $routes->post('them', 'Cart::add');
+    $routes->post('sua', 'Cart::update');
+    $routes->post('xoa', 'Cart::remove');
+});
 /*
  * --------------------------------------------------------------------
  * Additional Routing
