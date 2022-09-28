@@ -2,7 +2,7 @@
 
 namespace Config;
 
-use App\Filters\AuthToken;
+use App\Filters\AuthLogin;
 use CodeIgniter\Config\BaseConfig;
 use CodeIgniter\Filters\CSRF;
 use CodeIgniter\Filters\DebugToolbar;
@@ -24,7 +24,7 @@ class Filters extends BaseConfig
         'honeypot'      => Honeypot::class,
         'invalidchars'  => InvalidChars::class,
         'secureheaders' => SecureHeaders::class,
-        'authlogin'     => AuthToken::class
+        'authlogin'     => AuthLogin::class
     ];
 
     /**
@@ -70,5 +70,10 @@ class Filters extends BaseConfig
      *
      * @var array
      */
-    public $filters = [];
+    public $filters = [
+        'authlogin' => [
+            'before' => ['gio-hang'],
+            'after' => ['dang-nhap', 'dang-ky']
+        ]
+    ];
 }

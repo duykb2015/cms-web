@@ -45,18 +45,24 @@
                             </a>
                         </li>
                     <?php endif ?>
-                    <?php if (!url_is('dang-nhap') && !url_is('dang-ky') && !$_COOKIE['token']) : ?>
-                        <li class="col-auto header__action__item ps-4 px-4">
-                            <a href="<?= base_url('dang-nhap') ?>" class="header__action__icon_order">
-                                <b>Đăng nhập</b>
-                            </a>
-                        </li>
-                    <?php else : ?>
-                        <li class="col-auto header__action__item ps-4 px-4">
-                            <a href="<?= base_url('dang-xuat') ?>" class="header__action__icon_order">
-                                <b></b>
-                            </a>
-                        </li>
+                    <?php if (!url_is('dang-nhap') && !url_is('dang-ky')) : ?>
+                        <?php if (!get_cookie('token')) : ?>
+                            <li class="col-auto header__action__item ps-4 px-4">
+                                <a href="<?= base_url('dang-nhap') ?>" class="header__action__icon_store">
+                                    Đăng nhập
+                                    <b>hoặc Đăng kí</b>
+                                </a>
+                            </li>
+                        <?php else : ?>
+                            <li class="col-auto header__action__item ps-4 px-4">
+                                <a href="<?= base_url('tai-khoan') ?>" class="header__action__icon_order">
+                                    Quản lý
+                                    <b>Tài khoản</b>
+                                </a>
+                            </li>
+                        <?php endif ?>
+
+
                     <?php endif ?>
 
                 </ul>
@@ -73,7 +79,6 @@
                         <li class="nav-icon ">
                             <a href="<?= base_url() . '/' . $row->slug ?>" target="_self">
                                 <span>
-                                    <!-- <img src="https://cdn.minhtuanmobile.com/uploads/items/iphone-210331112745.png" loading="lazy" alt="iPhone"> -->
                                     <?= $row->name ?>
                                 </span>
                             </a>

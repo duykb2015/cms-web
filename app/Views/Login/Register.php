@@ -1,22 +1,7 @@
 <?= $this->extend('layout') ?>
 <?= $this->section('content') ?>
 <div class="clearfix">
-    <div class="clearfix" id="bg-main">
-        <div class="container">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item">
-                    <a href="<?= base_url() ?>">Trang chủ</a>
-                </li>
-                <li class="breadcrumb-item">
-
-                    <a href="<?= base_url('dang-ký') ?>" title="Đơn hàng của bạn" rel="v:url" property="v:title">
-                        Đăng ký
-                    </a>
-                </li>
-            </ol>
-        </div>
-    </div>
-    <div class="container wrapper-container pt-0 pt-lg-0">
+    <div class="container wrapper-container mt-4 pt-0 pt-lg-0">
         <form method="post" class="hpro__bestseller home-boxproduct cart__container fcart__container">
             <h1 class="hboxproduct__title color-hover">Đăng ký</h1>
             <div class="fcartbox row">

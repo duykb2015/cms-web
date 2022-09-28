@@ -3,7 +3,6 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
-use CodeIgniter\Cookie\Cookie;
 
 class Login extends BaseController
 {
@@ -55,7 +54,12 @@ class Login extends BaseController
         }
 
         //set cookie expired after 15 mins
-        set_cookie('token', $result->token, time() + 15 * 60);
+        $is_cookie_set = setcookie('token', $result->token, time() + 15 * 60);
+        if (!$is_cookie_set) {
+            $data['error'] = "Đã có lỗi xảy ra, vui lòng thử lại sau";
+            return view('login/login', $data);
+        }
+
         return redirect()->to('/');
     }
 
@@ -108,5 +112,12 @@ class Login extends BaseController
 
         $data['success'] = 'Đăng ký thành công, giờ bạn có thể đăng nhập';
         return view('login/register', $data);
+    }
+
+    public function logout()
+    {
+        // delete_cookie('token');
+        setcookie('token', '', time() - 60 * 60);
+        return redirect()->to('dang-nhap');
     }
 }

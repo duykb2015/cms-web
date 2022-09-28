@@ -49,8 +49,9 @@ $routes->group('dang-ky', function ($routes) {
     $routes->get('', 'Login::register');
     $routes->post('', 'Login::auth_register');
 });
+$routes->get('dang-xuat', 'Login::logout');
 
-$routes->group('gio-hang', ['filter' => 'authlogin'], function ($routes) {
+$routes->group('gio-hang', function ($routes) {
     $routes->get('', 'Cart::index');
     $routes->post('them', 'Cart::add');
     $routes->post('sua', 'Cart::update');

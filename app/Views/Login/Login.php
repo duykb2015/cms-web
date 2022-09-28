@@ -7,8 +7,8 @@
             <div class="fcartbox row">
                 <div class="col-12 col-lg-6">
                     <div class="mb-3">
-                        <?php if (isset($auth_err)) :  ?>
-                            <div class="alert-danger rounded mb-1 p-1"><?= $auth_err ?></div>
+                        <?php if (isset($auth_error)) :  ?>
+                            <div class="alert-danger rounded mb-1 p-1"><?= $auth_error ?></div>
                         <?php endif ?>
 
                         <label class="form-label b500">Email<b class="text-danger ml-1">*</b></label>

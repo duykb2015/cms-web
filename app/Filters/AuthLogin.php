@@ -5,9 +5,8 @@ namespace App\Filters;
 use CodeIgniter\Filters\FilterInterface;
 use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
-use Config\Cookie;
 
-class AuthToken implements FilterInterface
+class AuthLogin implements FilterInterface
 {
     /**
      * Do whatever processing this filter needs to do.
@@ -26,6 +25,7 @@ class AuthToken implements FilterInterface
      */
     public function before(RequestInterface $request, $arguments = null)
     {
+        //
         helper('cookie');
         
         if (!get_cookie('token')) {
@@ -48,5 +48,10 @@ class AuthToken implements FilterInterface
     public function after(RequestInterface $request, ResponseInterface $response, $arguments = null)
     {
         //
+        helper('cookie');
+        
+        if (get_cookie('token')) {
+            return redirect()->to('/');
+        }
     }
 }
