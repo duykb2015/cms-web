@@ -7,6 +7,8 @@ use CodeIgniter\API\ResponseTrait;
 class Cart extends BaseController
 {
     use ResponseTrait;
+    private $cart_v1 = 'http://localhost:1993/v1/cart';
+
     public function index()
     {
         $data['menu'] = cache()->get('menu');

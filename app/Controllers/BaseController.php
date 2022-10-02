@@ -38,6 +38,11 @@ abstract class BaseController extends Controller
     protected $helpers = ['Common', 'cookie', 'form'];
 
     /**
+     * Curl client
+     */
+    public $client;
+
+    /**
      * Constructor.
      */
     public function initController(RequestInterface $request, ResponseInterface $response, LoggerInterface $logger)
@@ -48,5 +53,8 @@ abstract class BaseController extends Controller
         // Preload any models, libraries, etc, here.
 
         // E.g.: $this->session = \Config\Services::session();
+
+        $this->client = \Config\Services::curlrequest();
+        $this->client->setHeader('Content-Type', 'application/json');
     }
 }

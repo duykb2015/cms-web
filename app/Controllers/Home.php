@@ -17,7 +17,7 @@ class Home extends BaseController
         $menu = $menu_m->get_menu($this->url);
         if ($menu) {
             $data['menu'] = $menu->result;
-            cache()->save('menu', $menu->result, 9999);
+            cache()->save('menu', $menu->result);
         }
 
         $product_m = new ProductModel();

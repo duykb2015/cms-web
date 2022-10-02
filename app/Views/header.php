@@ -32,7 +32,6 @@
                             <i class="fa fa-bars"></i>
                         </button>
                     </div>
-
                 </div>
             </div>
             <div class="col-auto header__action__container">
@@ -41,7 +40,7 @@
                         <li class="col-auto header__action__item ps-4 px-4">
                             <a href="<?= base_url('gio-hang') ?>" class="header__action__icon_order">
                                 <b>Giỏ hàng</b>
-                                <span class="cartitems_total"><?= !empty($total_cart_items) ? $total_cart_items : 0  ?> sản phẩm</span>
+                                <span class="cartitems_total">Của bạn</span>
                             </a>
                         </li>
                     <?php endif ?>
@@ -54,15 +53,15 @@
                                 </a>
                             </li>
                         <?php else : ?>
-                            <li class="col-auto header__action__item ps-4 px-4">
-                                <a href="<?= base_url('tai-khoan') ?>" class="header__action__icon_order">
-                                    Quản lý
-                                    <b>Tài khoản</b>
-                                </a>
-                            </li>
+                            <?php if (!url_is('tai-khoan')) : ?>
+                                <li class="col-auto header__action__item ps-4 px-4">
+                                    <a href="<?= base_url('tai-khoan') ?>" class="header__action__icon_order">
+                                        Quản lý
+                                        <b>Tài khoản</b>
+                                    </a>
+                                </li>
+                            <?php endif ?>
                         <?php endif ?>
-
-
                     <?php endif ?>
 
                 </ul>
@@ -77,7 +76,7 @@
                 <?php if (isset($menu)) : ?>
                     <?php foreach ($menu as $row) : ?>
                         <li class="nav-icon ">
-                            <a href="<?= base_url() . '/' . $row->slug ?>" target="_self">
+                            <a href="<?= base_url('danh-muc') . '/' . $row->slug ?>" target="_self">
                                 <span>
                                     <?= $row->name ?>
                                 </span>
@@ -87,7 +86,7 @@
                                     <ul class="header__navsub__container">
                                         <?php foreach ($row->sub_menu as $sub_menu) : ?>
                                             <li>
-                                                <a href="<?= base_url() . '/' . $sub_menu->slug ?>" class="header__navsub__title">
+                                                <a href="<?= base_url('danh-muc') . '/' . $sub_menu->slug ?>" class="header__navsub__title">
                                                     <?= $sub_menu->name ?>
                                                 </a>
                                                 <?php if ($row->category) : ?>
@@ -95,7 +94,7 @@
                                                         <ul class="header__navsub__container ">
                                                             <?php foreach ($sub_menu->category as $category) : ?>
                                                                 <li>
-                                                                    <a href="<?= base_url() . '/' . $category->slug ?>" class="header__navsub__title" target="_self">
+                                                                    <a href="<?= base_url('danh-muc') . '/' . $category->slug ?>" class="header__navsub__title" target="_self">
                                                                         <?= $category->name ?>
                                                                     </a>
                                                                 </li>
@@ -111,7 +110,7 @@
                                     <ul class="header__navsub__container">
                                         <?php foreach ($row->category as $category) : ?>
                                             <li>
-                                                <a href="<?= base_url() . '/' . $category->slug ?>" class="header__navsub__title">
+                                                <a href="<?= base_url('danh-muc') . '/' . $category->slug ?>" class="header__navsub__title">
                                                     <?= $category->name ?>
                                                 </a>
                                             </li>

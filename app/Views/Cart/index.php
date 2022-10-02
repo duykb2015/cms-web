@@ -133,17 +133,10 @@
                         <div class="col text-right">Tạm tính</div>
                         <div class="price col price-amount cart_amount_item">26,490,000</div>
                     </div>
-
-
                 </div>
-
-
-
             </div>
 
             <hr class="hr_cart mt-0">
-
-
             <div class="fcartbox row">
 
 
@@ -167,135 +160,26 @@
                         <textarea name="mess" class="form-control" rows="1"></textarea>
                     </div>
                 </div>
-                <div class="col-12 col-lg-6">
-                    <p class="tg_itemlabel">Thông tin giao nhận</p>
-                    <div class="fcart_boxdelivery border mb-0">
-                        <div class="accordion accordion-flush" id="delivery_accnav">
-                            <div class="accordion-item">
-                                <div class="accordion-header accordion-button collapsed" id="dnav_hpayment-cod" type="button" data-bs-toggle="collapse" data-bs-target="#dnav_cpayment-cod" aria-expanded="true" aria-controls="dnav_cpayment-cod">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="delivery_method" id="fr_payment-cod" value="payment-cod" autocomplete="off" required>
-                                        <label class="form-check-label" for="fr_payment-cod">
-                                            Giao hàng tại nhà
-                                        </label>
-                                    </div>
 
-                                </div>
-                                <div id="dnav_cpayment-cod" class="accordion-collapse collapse " aria-labelledby="dnav_hpayment-cod" data-bs-parent="#delivery_accnav">
-                                    <div class="accordion-body bg-light delivery_accnav__body">
-
-                                        <div class="mb-3">
-                                            <div class="form-floating">
-                                                <input type="text" class="form-control" name="address" autocomplete="off" required value="" id="finput_address">
-                                                <label for="finput_address" class="form-label b500">Địa chỉ</label>
-                                            </div>
-                                        </div>
-                                        <div class="row gx-2">
-
-                                            <div class="col mb-2">
-                                                <div class="form-floating">
-                                                    <input type="text" class="form-control" name="province" autocomplete="off" required value="" id="fselect_province">
-                                                    <label for="fselect_province" class="form-label b500">Tỉnh/thành phố</label>
-                                                </div>
-                                            </div>
-                                            <div class="col mb-0">
-                                                <div class="form-floating">
-                                                    <input type="text" class="form-control" name="district" autocomplete="off" required value="" id="fselect_district">
-                                                    <label for="fselect_district" class="form-label b500">Quận/huyện</label>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <div class="accordion-header accordion-button collapsed" id="dnav_hpayment-onepay" type="button" data-bs-toggle="collapse" data-bs-target="#dnav_cpayment-onepay" aria-expanded="true" aria-controls="dnav_cpayment-onepay">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="delivery_method" id="fr_payment-onepay" value="payment-onepay" autocomplete="off" required>
-                                        <label class="form-check-label" for="fr_payment-onepay">
-                                            Thanh toán trực tuyến bằng Visa, Master/ ATM / QR Ngân hàng, Ví </label>
-                                    </div>
-
-                                </div>
-                                <div id="dnav_cpayment-onepay" class="accordion-collapse collapse " aria-labelledby="dnav_hpayment-onepay" data-bs-parent="#delivery_accnav">
-                                    <div class="accordion-body bg-light delivery_accnav__body">
-
-                                        <div class="mb-3">
-                                            <div class="form-floating">
-                                                <input type="text" class="form-control" name="address" autocomplete="off" required value="" id="finput_address">
-                                                <label for="finput_address" class="form-label b500">Địa chỉ</label>
-                                            </div>
-                                        </div>
-                                        <div class="row gx-2">
-
-                                            <div class="col mb-2">
-                                                <div class="form-floating">
-                                                    <input type="text" class="form-control" name="province" autocomplete="off" required value="" id="fselect_province">
-                                                    <label for="fselect_province" class="form-label b500">Tỉnh/thành phố</label>
-                                                </div>
-                                            </div>
-                                            <div class="col mb-0">
-                                                <div class="form-floating">
-                                                    <input type="text" class="form-control" name="district" autocomplete="off" required value="" id="fselect_district">
-                                                    <label for="fselect_district" class="form-label b500">Quận/huyện</label>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
+                <div class="fcartbox pb-3 mb-0 pt-md-4 pt-lg-0 text-center">
+                    <button type="submit" class="btn cart_btnitem cart_btnitem-red pb-0">
+                        <i class="fa fa-shopping-cart"></i>
+                        Đặt hàng
+                    </button>
                 </div>
-
-
             </div>
-
-
-
-            <div class="fcartbox pb-5 mb-0 pt-md-4 pt-lg-0 text-center">
-                <button type="submit" class="btn cart_btnitem cart_btnitem-red">
-                    <i class="fa fa-shopping-cart"></i>
-                    Đặt hàng </button>
-                <input type="hidden" name="visitor_id" value="" autocomplete="">
-            </div>
-
         </form>
-
-        <script>
-            is_checkfid = true;
-
-            const fpPromise = import('https://fpcdn.io/v3/D6J0AcUwK8dYzJ9UvhaW')
-                .then(FingerprintJS => FingerprintJS.load())
-            fpPromise
-                .then(fp => fp.get())
-                .then(result => {
-                    // This is the visitor identifier:
-                    const visitorId = result.visitorId;
-                    // TODO:: đưa visitorId (FID) vào form đơn hàng, lưu lại FID
-                    console.log(visitorId);
-                    $('input[name=visitor_id]').val(visitorId);
-                    if (typeof is_checkfid != 'undefined' && is_checkfid == true) {
-                        run_checkfid(visitorId);
-                    }
-                })
-        </script>
     </div>
 
     <script>
         $(document).ready(function(e) {
-
             $('form').on('submit', function() {
                 var _button = $(this).find('button[type=submit]');
                 _button.attr('disabled', 'disabled');
-                //setTimeout(function(){ _button.removeAttr( 'disabled') }, 5000);//
-                //return true;
+                setTimeout(function() {
+                    _button.removeAttr('disabled')
+                }, 5000); //
+                return true;
 
             });
 
@@ -303,18 +187,4 @@
     </script>
 </div>
 </div>
-
-<script>
-    $(document).ready(function(e) {
-
-        $('form').on('submit', function() {
-            var _button = $(this).find('button[type=submit]');
-            _button.attr('disabled', 'disabled');
-            //setTimeout(function(){ _button.removeAttr( 'disabled') }, 5000);//
-            //return true;
-
-        });
-
-    });
-</script>
 <?= $this->endSection() ?>

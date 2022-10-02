@@ -6,8 +6,8 @@ use App\Controllers\BaseController;
 
 class Login extends BaseController
 {
-    private $authLoginV1    = 'http://localhost:1993/v1/user/auth/login';
-    private $authRegisterV1 = 'http://localhost:1993/v1/user/auth/register';
+    private $auth_login_v1    = 'http://localhost:1993/v1/user/auth/login';
+    private $auth_register_v1 = 'http://localhost:1993/v1/user/auth/register';
 
     public function login()
     {
@@ -16,9 +16,6 @@ class Login extends BaseController
 
     public function auth_login()
     {
-        $client = \Config\Services::curlrequest();
-        $client->setHeader('Content-Type', 'application/json');
-
         $email    = $this->request->getPost('email');
         $password = $this->request->getPost('password');
 
@@ -37,24 +34,22 @@ class Login extends BaseController
         }
 
         //Need to encrypt password before sending
-
         $datas = [
             'email' => $email,
             'password' => md5($password)
         ];
 
         $body   = json_encode($datas);
-        $reps   = $client->setBody("$body")->request('POST', $this->authLoginV1);
+        $resp   = $this->client->setBody("$body")->request('POST', $this->auth_login_v1);
         //Not check error yet
-        $result = json_decode($reps->getBody())->result;
-
+        $result = json_decode($resp->getBody())->result;
         if ($result->code != HTTP_STATUS_OK) {
             $data['auth_error'] = $result->msg;
             return view('login/login', $data);
         }
 
         //set cookie expired after 15 mins
-        $is_cookie_set = setcookie('token', $result->token, time() + 15 * 60);
+        $is_cookie_set = setcookie('token', $result->token); //time() + 15 * 60
         if (!$is_cookie_set) {
             $data['error'] = "Đã có lỗi xảy ra, vui lòng thử lại sau";
             return view('login/login', $data);
@@ -70,12 +65,9 @@ class Login extends BaseController
 
     public function auth_register()
     {
-        $client = \Config\Services::curlrequest();
-        $client->setHeader('Content-Type', 'application/json');
-
         $email    = $this->request->getPost('email');
         $password = $this->request->getPost('password');
-        $username = $this->request->getPost('username');
+        $name     = $this->request->getPost('name');
         $address  = $this->request->getPost('address');
         $phone    = $this->request->getPost('phone');
 
@@ -86,7 +78,6 @@ class Login extends BaseController
         //validation
         $validation = \Config\Services::validation();
         $validation->setRuleGroup('login');
-
         //if something wrong, redirect to login page and show error message
         if (!$validation->run($inputs)) {
             $data['error'] = $validation->getErrors();
@@ -97,14 +88,13 @@ class Login extends BaseController
         $datas = [
             'email'    => $email,
             'password' => md5($password),
-            'username' => $username,
+            'name'     => $name,
             'address'  => $address,
             'phone'    => $phone
         ];
         $body = json_encode($datas);
-        $reps = $client->setBody("$body")->request('POST', $this->authRegisterV1);
-        $result = json_decode($reps->getBody())->result;
-
+        $resp = $this->client->setBody("$body")->request('POST', $this->auth_register_v1);
+        $result = json_decode($resp->getBody())->result;
         if ($result->code != HTTP_STATUS_OK) {
             $data['auth_error'] = $result->msg;
             return view('login/register', $data);

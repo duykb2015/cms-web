@@ -57,4 +57,15 @@ class Validation extends BaseConfig
             'min_length' => 'Mật khẩu phải có ít nhất 4 kí tự!',
         ],
     ];
+
+    public $user = [
+        'password'     => 'required|min_length[4]',
+    ];
+
+    public $user_errors = [
+        'password' => [
+            'required' => 'Mật khẩu không được để trống!',
+            'min_length' => 'Mật khẩu phải có ít nhất 4 kí tự!',
+        ],
+    ];
 }

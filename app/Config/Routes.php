@@ -57,6 +57,11 @@ $routes->group('gio-hang', function ($routes) {
     $routes->post('sua', 'Cart::update');
     $routes->post('xoa', 'Cart::remove');
 });
+
+$routes->group('tai-khoan', function ($routes) {
+    $routes->get('', 'User::index');
+    $routes->post('sua', 'User::update');
+});
 /*
  * --------------------------------------------------------------------
  * Additional Routing

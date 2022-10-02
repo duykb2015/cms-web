@@ -28,7 +28,7 @@
                     </div>
                     <div class="mb-3">
                         <label class="form-label b500">Họ và Tên</label>
-                        <input type="text" class="form-control hide_arrow" name="username" autocomplete="off" value="<?= set_value('username') ?>">
+                        <input type="text" class="form-control hide_arrow" name="name" autocomplete="off" value="<?= set_value('name') ?>">
                     </div>
                     <div class="mb-3">
                         <label class="form-label b500">Địa chỉ</label>

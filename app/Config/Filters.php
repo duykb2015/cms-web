@@ -72,7 +72,7 @@ class Filters extends BaseConfig
      */
     public $filters = [
         'authlogin' => [
-            'before' => ['gio-hang'],
+            'before' => ['gio-hang', 'tai-khoan'],
             'after' => ['dang-nhap', 'dang-ky']
         ]
     ];

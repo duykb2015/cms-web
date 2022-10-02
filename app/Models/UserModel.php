@@ -2,11 +2,9 @@
 
 namespace App\Models;
 
-use CodeIgniter\HTTP\Response;
-use CodeIgniter\HTTP\ResponseInterface;
 use CodeIgniter\Model;
 
-class MenuModel extends Model
+class UserModel extends Model
 {
     protected $DBGroup          = 'default';
     protected $table            = '';
@@ -41,27 +39,4 @@ class MenuModel extends Model
     protected $afterFind      = [];
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
-
-    /**
-     * 
-     * Get all menu from api
-     * 
-     * @param string $url api url
-     * @return object|array
-     */
-    function get_menu($url)
-    {
-        $client = \Config\Services::curlrequest();
-        $response = $client->request('GET', $url);
-        if ($response->getStatusCode() != Response::HTTP_OK) {
-            return false;
-        }
-
-        $body = json_decode($response->getBody());
-        if (!$body) {
-            return false;
-        }
-
-        return $body;
-    }
 }
