@@ -92,3 +92,9 @@ define('EVENT_PRIORITY_NORMAL', 100);
  * @deprecated Use \CodeIgniter\Events\Events::PRIORITY_HIGH instead.
  */
 define('EVENT_PRIORITY_HIGH', 10);
+
+define('HTTP_STATUS_OK', 200);
+define('HTTP_STATUS_BAD_REQUEST', 400);
+define('HTTP_STATUS_UNAUTHORIZED', 401);
+define('HTTP_STATUS_NOT_FOUND', 404);
+define('HTTP_INTERNAL_SERVER_ERROR', 500);

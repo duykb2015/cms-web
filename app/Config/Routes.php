@@ -36,7 +36,32 @@ $routes->set404Override();
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
+$routes->group('san-pham', function ($routes) {
+    $routes->get('', 'Product ::index');
+    $routes->get('chi-tiet/:any', 'Product::detail');
+});
 
+$routes->group('dang-nhap', function ($routes) {
+    $routes->get('', 'Login::login');
+    $routes->post('', 'Login::auth_login');
+});
+$routes->group('dang-ky', function ($routes) {
+    $routes->get('', 'Login::register');
+    $routes->post('', 'Login::auth_register');
+});
+$routes->get('dang-xuat', 'Login::logout');
+
+$routes->group('gio-hang', function ($routes) {
+    $routes->get('', 'Cart::index');
+    $routes->post('them', 'Cart::add');
+    $routes->post('sua', 'Cart::update');
+    $routes->post('xoa', 'Cart::remove');
+});
+
+$routes->group('tai-khoan', function ($routes) {
+    $routes->get('', 'User::index');
+    $routes->post('sua', 'User::update');
+});
 /*
  * --------------------------------------------------------------------
  * Additional Routing
